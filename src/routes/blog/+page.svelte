@@ -1,16 +1,13 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	import { ArrowRight } from 'lucide-svelte';
 
 	export let data;
-
-	const MAX_POSTS = 3;
 </script>
 
 <!-- Posts -->
 <section>
 	<ul class="grid divide-y divide-primary-700">
-		{#each data.posts.slice(0, MAX_POSTS) as post}
+		{#each data.posts as post}
 			<li>
 				<div class="max-w-lg">
 					<a href={'/blog/' + post.slug} class="text-lg font-semibold capitalize">{post.title}</a>
@@ -33,13 +30,6 @@
 			</li>
 		{/each}
 	</ul>
-	{#if data.posts.length > MAX_POSTS}
-		<a
-			href="/blog"
-			class="mt-8 flex max-w-max items-center rounded bg-secondary-300 px-4 py-2 text-lg font-light text-tertiary-900 hover:bg-secondary-200"
-			>All Posts <ArrowRight class="ml-2 inline-block" /></a
-		>
-	{/if}
 </section>
 
 <style lang="postcss">
