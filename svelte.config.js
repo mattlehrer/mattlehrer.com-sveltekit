@@ -8,6 +8,9 @@ import t from './night-owl.json' assert { type: 'json' };
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
+	layout: {
+		_: './src/lib/md_custom/mdsvex_layout.svelte',
+	},
 	smartypants: true,
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
