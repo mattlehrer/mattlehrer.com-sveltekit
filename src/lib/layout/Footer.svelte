@@ -2,8 +2,10 @@
 	import { Rss } from 'lucide-svelte';
 </script>
 
-<footer>
-	<div class="flex items-center gap-4">
+<footer
+	class="flex flex-col flex-wrap items-center justify-around gap-6 px-8 pb-8 pt-20 opacity-70 sm:flex-row md:max-w-7xl md:gap-8"
+>
+	<div class="flex items-center gap-8">
 		<a href="https://github.com/mattlehrer/">
 			<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 				<path
@@ -23,6 +25,7 @@
 			>
 			<span class="sr-only">Mastodon</span>
 		</a>
+		<a class="block sm:hidden" href="/rss.xml" target="_blank"><Rss /></a>
 	</div>
 	<div class="made">
 		Made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -31,27 +34,22 @@
 			/>
 		</svg> in Malmö
 	</div>
-	<div class="flex items-center gap-4">
+	<div class="hidden items-center gap-4 sm:flex">
 		<a href="/rss.xml" target="_blank"><Rss /></a>
 	</div>
 </footer>
 
 <style>
 	footer {
-		width: max(80%, 300px);
-		margin: auto auto 0 auto;
-		max-width: 1200px;
+		/* width: max(80%, 300px); */
+		/* margin: auto auto 0 auto; */
+		/* max-width: 1200px;
 		padding: 5rem 2rem 2rem;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		align-items: center;
-		opacity: 0.7;
-
-		@media screen and (min-width: 576px) {
-			width: 100%;
-			margin: auto auto 0 auto;
-		}
+		opacity: 0.7; */
 	}
 
 	a {
@@ -62,11 +60,6 @@
 		display: flex;
 		align-items: center;
 		order: initial;
-
-		@media screen and (max-width: 576px) {
-			order: 1;
-			margin-top: 1rem;
-		}
 	}
 
 	svg {
