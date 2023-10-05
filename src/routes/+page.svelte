@@ -12,9 +12,11 @@
 		{#each data.posts.slice(0, MAX_POSTS) as post}
 			<li>
 				<div class="max-w-lg">
-					<a href={post.slug} class="text-lg font-semibold capitalize">{post.title}</a>
+					<a href={'blog/' + post.slug} class="text-lg font-semibold capitalize">{post.title}</a>
 					<p class="font-extralight text-primary-900">{formatDate(post.date)}</p>
-					<p class="mt-3">{post.description}</p>
+					{#if post.description}
+						<p class="mt-3">{post.description}</p>
+					{/if}
 					{#if post.categories && post.categories.length > 0}
 						<div class="flex">
 							{#each post.categories as category}
