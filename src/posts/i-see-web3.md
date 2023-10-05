@@ -11,13 +11,17 @@ For the last seven or eight years I've thought about and described the future of
 
 Yet the digital goods – what is exchanged - has been hard to picture. I felt like the opportunities would come and that the first crypto tokens and networks may not be around when the use cases started to arrive but that it's worth placing some bets. I do think digital goods will be a meaningful part of value exchange in the future.
 
-### Idea triggers
+## Idea triggers
 
 A much broader and more interesting picture is becoming clear, because of a couple recent things. First, [Dom Hofmann](https://twitter.com/dhof/) launched the [Loot Project](https://www.lootproject.com/), which triggered a lot of ideas. Second, I wrote a paper defining innovation.
 
 The Loot Project is interesting because it showed how the blockchain enables multiple teams to build off of the same public information. In this case, it's a set of "adventure gear" for a game. The game is what anyone wants to make. It set off a lot of creativity.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Really think we’re in a different era now. There was Before Loot and now there’s After Loot. Punk moment all over again.</p>&mdash; John Palmer 🥳 (@john_c_palmer) <a href="https://twitter.com/john_c_palmer/status/1432606797186179072?ref_src=twsrc%5Etfw">August 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet not-prose" markdown="1">
+Really think we’re in a different era now. There was Before Loot and now there’s After Loot. Punk moment all over again.
+
+&mdash; John Palmer 🥳 (@john_c_palmer) [August 31, 2021](https://twitter.com/john_c_palmer/status/1432606797186179072?ref_src=twsrc%5Etfw)
+</blockquote>
 
 Then came a week of thinking about what innovation is. The core idea is about making something new or better that creates value in people's lives. But how it works is that innovations build on each other. Most innovation is just the combination of two older innovations or bringing an innovation from one industry to another.
 
@@ -72,7 +76,7 @@ Now, the more people who care about a project, the more complain about any produ
 
 It's easy to see how the base could be a game, with character features and items owned by each crypto wallet and then allowing those characters to interact in a different world built by a second team. I don't think this concept is limited to games, though. Social networks and the idea of a portable social graph is appealing. Can it be done for B2B SaaS? I can't envision a good use case yet.
 
-### Ten years of failure
+## Ten years of failure
 
 For the last ten years, people have tried to do the normal thing of porting existing applications to blockchain. Every new technology has seen that pattern of doing old things in a new way, usually starting with some way of watching porn. For once, that wasted a lot of people’s time and created a lot of bets around the idea of bitcoin being used for X number of offline transactions or some dollar volume threshold. Those ideas are appealing but not the only way to measure success.
 
@@ -82,7 +86,7 @@ Thinking about this family of technologies as a way to enable faster innovation 
 
 (And the NFT jpg craze, bubble or not, is good for this. It encourages building consumer-friendly wallet software, educates people on how to login to different services with one public identity, and it's fun.)
 
-### So, why would anyone launch a project on blockchain when another team could fork your project at any time?
+## So, why would anyone launch a project on blockchain when another team could fork your project at any time?
 
 It's obviously not the right choice in every situation. Large, well-resourced companies may not want to. The advantages for scrappier teams are similar to open source software-based companies. Why is Supabase, Ghost, or MongoDB open source? It builds community, allows anyone to judge quality of the work, and allows hesitant users to feel like they aren't locked in ("we can always run this ourselves"). Further, there's a built-in way to fund development from the community. No Kickstarter or Patreon required.
 
