@@ -1,6 +1,6 @@
 {
-    "name": "Matt Lehrer",
-    "short_name": "Matt Lehrer",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#442900",
-    "background_color": "#442900",
+    "theme_color": "#fdf7ed",
+    "background_color": "#fdf7ed",
     "display": "standalone"
 }
