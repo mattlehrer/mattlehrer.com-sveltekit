@@ -38,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/plus-jakarta-sans": "^5.0.15",
+		"colorjs.io": "^0.4.5",
 		"lucide-svelte": "^0.284.0",
 		"shiki": "^0.14.4"
 	}

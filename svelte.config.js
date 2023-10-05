@@ -3,7 +3,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import shiki from 'shiki';
 
-import t from './night-owl.json' assert { type: 'json' };
+import t from './src/theme/night-owl.json' assert { type: 'json' };
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
