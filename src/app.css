@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -19,56 +21,63 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
 	@apply bg-primary-800;
-	@apply outline-primary-850 rounded-full outline;
+	@apply rounded-full outline outline-primary-850;
 }
 
-blockquote.twitter-tweet {
-	display: inline-block;
-	font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
-	font-size: 1rem;
-	font-weight: bold;
-	line-height: 16px;
-	border-color: #eee #ddd #bbb;
-	border-radius: 5px;
-	border-style: solid;
-	border-width: 1px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-	margin: 10px 5px;
-	padding: 16px;
-	max-width: 468px;
-	background-color: #fff;
-}
+@layer components {
+	blockquote.twitter-tweet {
+		display: inline-block;
+		font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		line-height: 16px;
+		border-color: #eee #ddd #bbb;
+		border-radius: 5px;
+		border-style: solid;
+		border-width: 1px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+		margin: 10px 5px;
+		padding: 16px;
+		max-width: 468px;
+		background-color: #fff;
+	}
 
-blockquote.twitter-tweet p {
-	margin-top: 0.75rem;
-	font-size: 1rem;
-	font-weight: normal;
-	line-height: 20px;
-}
+	blockquote.twitter-tweet p {
+		margin-top: 0.75rem;
+		font-size: 1rem;
+		font-weight: normal;
+		line-height: 20px;
+	}
 
-blockquote.twitter-tweet a {
-	color: inherit;
-	font-weight: normal;
-	text-decoration: none;
-	outline: 0 none;
-}
+	blockquote.twitter-tweet a {
+		color: inherit;
+		font-weight: normal;
+		text-decoration: none;
+		outline: 0 none;
+	}
 
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-	text-decoration: underline;
-}
+	blockquote.twitter-tweet a:hover,
+	blockquote.twitter-tweet a:focus {
+		text-decoration: underline;
+	}
 
-.prose pre {
-	overflow-wrap: break-word;
-	min-width: 100%;
-	width: 0;
-	overflow: auto;
-}
+	.prose pre {
+		overflow-wrap: break-word;
+		min-width: 100%;
+		width: 0;
+		overflow: auto;
+	}
 
-code,
-.prose code {
-	font-family: 'Source Code Pro Variable', 'Nimbus Mono PS', 'Courier New', monospace;
-}
+	code,
+	.prose code {
+		font-family: 'Source Code Pro Variable', 'Nimbus Mono PS', 'Courier New', monospace;
+	}
 
-@tailwind components;
-@tailwind utilities;
+	@media (prefers-reduced-motion) {
+		::view-transition-group(*),
+		::view-transition-old(*),
+		::view-transition-new(*) {
+			animation: none;
+		}
+	}
+}

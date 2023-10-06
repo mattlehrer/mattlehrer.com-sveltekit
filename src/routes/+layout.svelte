@@ -9,6 +9,19 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import colors from '../theme/colors';
+	import { onNavigate } from '$app/navigation';
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				console.log({ navigation });
+				await navigation.complete;
+			});
+		});
+	});
 
 	const hexTheme = new Color(colors.primary[300]).to('srgb').toString({ format: 'hex' });
 </script>

@@ -13,7 +13,11 @@
 		{#each data.posts.slice(0, MAX_POSTS) as post}
 			<li>
 				<div>
-					<a href={'/blog/' + post.slug} class="text-lg font-semibold capitalize">{post.title}</a>
+					<a
+						href={'/blog/' + post.slug}
+						class="text-lg font-semibold capitalize"
+						style={`view-transition-name: ${post.slug}`}>{post.title}</a
+					>
 					<p class="font-extralight text-primary-900">{formatDate(post.date)}</p>
 					{#if post.description}
 						<p class="mt-3">{post.description}</p>
