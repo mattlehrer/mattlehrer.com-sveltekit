@@ -8,7 +8,7 @@
 	import { page } from '$app/stores';
 	import colors from '../theme/colors';
 
-	const hexTheme = new Color(colors.primary[500]).to('srgb').toString({ format: 'hex' });
+	const hexTheme = new Color(colors.primary[300]).to('srgb').toString({ format: 'hex' });
 </script>
 
 <svelte:head>

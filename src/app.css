@@ -8,6 +8,18 @@ body {
 body {
 	font-family: 'Plus Jakarta Sans Variable', sans-serif;
 	@apply bg-primary-300 text-primary-900;
+
+	overflow-y: scroll;
+	scrollbar-gutter: stable both-edges;
+}
+
+body::-webkit-scrollbar {
+	width: 0.75em;
+}
+
+body::-webkit-scrollbar-thumb {
+	@apply bg-primary-800;
+	@apply outline-primary-850 rounded-full outline;
 }
 
 blockquote.twitter-tweet {
