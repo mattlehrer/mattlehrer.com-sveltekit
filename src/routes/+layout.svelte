@@ -10,6 +10,7 @@
 	import { page } from '$app/stores';
 	import colors from '../theme/colors';
 	import { onNavigate } from '$app/navigation';
+	import { description, title, url } from '$lib/config';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -27,13 +28,10 @@
 </script>
 
 <svelte:head>
-	<title>Matt Lehrer</title>
-	<link rel="canonical" href={`https://mattlehrer.com${$page.url.pathname}`} />
+	<title>{title}</title>
+	<link rel="canonical" href={`${url}${$page.url.pathname}`} />
 	<meta name="theme-color" content={hexTheme} />
-	<meta
-		name="description"
-		content="The personal web site of Matt Lehrer, an American web developer, reader, and podcast fan in Malmö, Sweden, who is always available for beta or taste testing."
-	/>
+	<meta name="description" content={description} />
 </svelte:head>
 
 <div class="mx-auto grid max-w-full px-8 sm:max-w-7xl">
