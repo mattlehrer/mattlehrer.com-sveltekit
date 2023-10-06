@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="flex flex-col flex-wrap items-center justify-around gap-6 px-8 pb-8 pt-20 opacity-70 sm:flex-row md:max-w-7xl md:gap-8"
+	class="flex flex-col flex-wrap items-center justify-around gap-6 px-8 pb-8 pt-20 opacity-80 sm:flex-row md:max-w-7xl md:gap-8"
 >
 	<div class="flex items-center gap-8">
 		<a href="https://github.com/mattlehrer/">
@@ -25,7 +25,10 @@
 			>
 			<span class="sr-only">Mastodon</span>
 		</a>
-		<a class="block sm:hidden" href="/rss.xml" target="_blank"><Rss /></a>
+		<a class="block sm:hidden" href="/rss.xml" target="_blank"
+			><Rss />
+			<span class="sr-only">RSS Feed</span>
+		</a>
 	</div>
 	<div class="made">
 		Made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -35,7 +38,10 @@
 		</svg> in Malmö
 	</div>
 	<div class="hidden items-center gap-4 sm:flex">
-		<a href="/rss.xml" target="_blank"><Rss /></a>
+		<a href="/rss.xml" target="_blank">
+			<Rss />
+			<span class="sr-only">RSS Feed</span>
+		</a>
 	</div>
 </footer>
 
