@@ -16,7 +16,7 @@ export default {
 						'--tw-prose-bold': theme('colors.primary[900]'),
 						'--tw-prose-counters': theme('colors.primary[600]'),
 						'--tw-prose-bullets': theme('colors.primary[400]'),
-						'--tw-prose-hr': theme('colors.primary[300]'),
+						'--tw-prose-hr': theme('colors.primary[700]'),
 						'--tw-prose-quotes': theme('colors.primary[900]'),
 						'--tw-prose-quote-borders': theme('colors.primary[300]'),
 						'--tw-prose-captions': theme('colors.primary[700]'),
