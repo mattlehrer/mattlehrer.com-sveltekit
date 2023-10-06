@@ -11,6 +11,7 @@ export default {
 		700: 'color(display-p3 0.749 0.498 0.09 / 1)',
 		800: 'color(display-p3 0.498 0.329 0.059 / 1)',
 		900: 'color(display-p3 0.251 0.165 0.031 / 1)',
+		850: 'color(display-p3 0.286 0.188 0.035 / 1)',
 		950: 'color(display-p3 0.125 0.082 0.016 / 1)',
 	},
 	secondary: {

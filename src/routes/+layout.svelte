@@ -21,7 +21,7 @@
 	/>
 </svelte:head>
 
-<div class="7xl:px-0 mx-auto grid max-w-7xl px-8 sm:px-16">
+<div class="mx-auto grid max-w-full px-8 sm:max-w-7xl">
 	<Header />
 
 	<main class="py-8 sm:py-12">

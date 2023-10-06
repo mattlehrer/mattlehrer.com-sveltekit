@@ -10,10 +10,10 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="mx-auto max-w-2xl">
-	<h1 class="text-5xl capitalize sm:text-6xl">{data.meta.title}</h1>
+<article class="prose-primary prose prose-lg sm:prose-xl">
+	<h1 class="text-4xl capitalize leading-[1.2] sm:text-6xl sm:leading-[1.1]">{data.meta.title}</h1>
 
-	<section class="prose mt-12">
+	<section class="mt-12">
 		<svelte:component this={data.content} />
 	</section>
 
@@ -24,7 +24,7 @@
 				{#each data.meta.categories as category}
 					<a
 						href="/"
-						class="mr-4 mt-4 inline-block rounded bg-secondary-300 px-2 py-1 text-sm font-light text-tertiary-900 hover:bg-secondary-200"
+						class="mr-4 mt-4 inline-block rounded bg-secondary-300 px-2 py-1 text-sm font-light text-tertiary-900 no-underline hover:bg-secondary-200"
 						>{category}</a
 					>
 				{/each}
@@ -32,10 +32,3 @@
 		{/if}
 	</section>
 </article>
-
-<style>
-	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
-	}
-</style>

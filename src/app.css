@@ -58,5 +58,12 @@ blockquote.twitter-tweet a:focus {
 	text-decoration: underline;
 }
 
+.prose pre {
+	overflow-wrap: break-word;
+	min-width: 100%;
+	width: 0;
+	overflow: auto;
+}
+
 @tailwind components;
 @tailwind utilities;
