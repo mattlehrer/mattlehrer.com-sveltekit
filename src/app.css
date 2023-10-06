@@ -65,5 +65,10 @@ blockquote.twitter-tweet a:focus {
 	overflow: auto;
 }
 
+code,
+.prose code {
+	font-family: 'Source Code Pro Variable', 'Nimbus Mono PS', 'Courier New', monospace;
+}
+
 @tailwind components;
 @tailwind utilities;

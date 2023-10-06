@@ -1,6 +1,8 @@
 <script>
 	// Supports weights 200-800
 	import '@fontsource-variable/plus-jakarta-sans';
+	// Supports weights 200-900
+	import '@fontsource-variable/source-code-pro';
 	import Color from 'colorjs.io';
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
