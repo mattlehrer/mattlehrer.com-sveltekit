@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// Supports weights 200-800
 	import '@fontsource-variable/plus-jakarta-sans';
 	// Supports weights 200-900
@@ -10,7 +10,7 @@
 	import { page } from '$app/stores';
 	import colors from '../theme/colors';
 	import { onNavigate } from '$app/navigation';
-	import { description, title, url } from '$lib/config';
+	import { description, url } from '$lib/config';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -28,7 +28,6 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
 	<link rel="canonical" href={`${url}${$page.url.pathname}`} />
 	<meta name="theme-color" content={hexTheme} />
 	<meta name="description" content={description} />

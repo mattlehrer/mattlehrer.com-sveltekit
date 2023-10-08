@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { title } from '$lib/config.js';
 	import { formatDate } from '$lib/utils';
 	import { ArrowRight } from 'lucide-svelte';
 
@@ -6,6 +7,10 @@
 
 	const MAX_POSTS = 3;
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 <!-- Posts -->
 <section>
