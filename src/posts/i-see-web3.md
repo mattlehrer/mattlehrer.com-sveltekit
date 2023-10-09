@@ -21,6 +21,7 @@ The Loot Project is interesting because it showed how the blockchain enables mul
 Really think we’re in a different era now. There was Before Loot and now there’s After Loot. Punk moment all over again.
 
 &mdash; John Palmer 🥳 (@john_c_palmer) [August 31, 2021](https://twitter.com/john_c_palmer/status/1432606797186179072?ref_src=twsrc%5Etfw)
+
 </blockquote>
 
 Then came a week of thinking about what innovation is. The core idea is about making something new or better that creates value in people's lives. But how it works is that innovations build on each other. Most innovation is just the combination of two older innovations or bringing an innovation from one industry to another.

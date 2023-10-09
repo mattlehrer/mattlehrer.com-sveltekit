@@ -53,7 +53,7 @@ Add a new [\$layout.svelte file](https://github.com/mattlehrer/sveltekit-vite-ta
 ```svelte
 <!-- ./src/routes/$layout.svelte -->
 <script>
-  import '../style.css';
+	import '../style.css';
 </script>
 
 <slot />

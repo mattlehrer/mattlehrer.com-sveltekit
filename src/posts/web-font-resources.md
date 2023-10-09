@@ -3,9 +3,9 @@ title: What to know about web fonts
 description: The best resources to learn about web fonts
 date: '2021-03-03'
 created: 2021-02-25
-categories: 
-- webdev
-- typography
+categories:
+  - webdev
+  - typography
 published: true
 ---
 

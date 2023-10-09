@@ -1,6 +1,6 @@
 ---
 title: Steps to make sure you're using Apple Silicon brew instead of Rosetta
-description: 
+description:
 date: '2023-01-31'
 created: 2023-01-31
 categories: [macos, apple-silicon]
@@ -12,25 +12,26 @@ I recently figured out I had been using the Rosetta version of VS Code. I am not
 ## Check if you're using Rosetta
 
 ```zsh
-which brew 
+which brew
 ```
 
 That should return:
 
-```zsh 
-/opt/homebrew/bin/brew 
+```zsh
+/opt/homebrew/bin/brew
 ```
 
 if you're using the Apple Silicon version. If it returns:
 
 ```zsh
 /usr/local/bin/brew
-``` 
+```
 
-then you're using the Rosetta version. If you're using the Rosetta version, you can check if you have the Apple Silicon version installed by running 
+then you're using the Rosetta version. If you're using the Rosetta version, you can check if you have the Apple Silicon version installed by running
+
 ```zsh
 arch -x86_64 brew --version
-``` 
+```
 
 If you get a version number, you have the Apple Silicon version installed. Then make sure to update your path, as described in this [Github issue](https://github.com/Homebrew/discussions/discussions/938):
 
@@ -39,14 +40,15 @@ Put `eval "$(/opt/homebrew/bin/brew shellenv)" ` in your ~/.zprofile.
 ## Have brew output everything installed with Rosetta
 
 For CLI tools:
+
 ```zsh
-/usr/local/bin/brew brew list 
+/usr/local/bin/brew brew list
 ```
 
 and for GUI apps:
- 
- ```zsh
-/usr/local/bin/brew list --cask 
+
+```zsh
+/usr/local/bin/brew list --cask
 ```
 
 ## Output those to a Brewfile
@@ -62,6 +64,7 @@ brew bundle --file Brewfile
 ```
 
 ## Uninstall the Rosetta brew
+
 From the [official instructions](https://github.com/Homebrew/install#uninstall-homebrew), but modified to ensure you're running the script with Rosetta:
 
 ```zsh
