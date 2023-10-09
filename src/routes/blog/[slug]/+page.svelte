@@ -26,7 +26,7 @@
 
 	<section class="mt-12">
 		<p class="font-extralight">Published {formatDate(data.meta.date)}</p>
-		{#if data.meta.categories.length > 0}
+		{#if data.meta.categories?.length > 0}
 			<div class="flex">
 				{#each data.meta.categories as category}
 					<a
