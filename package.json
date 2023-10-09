@@ -2,6 +2,7 @@
 	"name": "mattlehrer.com-sveltekit",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -36,7 +37,6 @@
 		"typescript": "^5.2.2",
 		"vite": "^4.4.11"
 	},
-	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/plus-jakarta-sans": "^5.0.16",
 		"@fontsource-variable/source-code-pro": "^5.0.14",
