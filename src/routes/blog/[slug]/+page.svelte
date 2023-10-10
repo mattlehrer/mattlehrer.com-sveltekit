@@ -30,7 +30,7 @@
 			<div class="flex">
 				{#each data.meta.categories as category}
 					<a
-						href="/"
+						href={'/blog/tag/' + category}
 						class="mr-4 mt-4 inline-block rounded bg-secondary-300 px-2 py-1 text-sm font-light text-tertiary-900 no-underline hover:bg-secondary-200"
 						>{category}</a
 					>
