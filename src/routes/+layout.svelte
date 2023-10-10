@@ -18,7 +18,6 @@
 		return new Promise((resolve) => {
 			document.startViewTransition(async () => {
 				resolve();
-				console.log({ navigation });
 				await navigation.complete;
 			});
 		});
