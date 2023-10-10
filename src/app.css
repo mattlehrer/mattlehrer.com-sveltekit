@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-	min-height: 100dvh;
-}
+@layer base {
+	html,
+	body {
+		min-height: 100dvh;
+	}
 
-body {
-	font-family: 'Plus Jakarta Sans Variable', sans-serif;
-	@apply bg-primary-300 text-primary-900;
+	body {
+		font-family: 'Plus Jakarta Sans Variable', sans-serif;
+		@apply bg-primary-300 text-primary-900;
 
-	overflow-y: scroll;
-	scrollbar-gutter: stable both-edges;
-}
+		overflow-y: scroll;
+		scrollbar-gutter: stable both-edges;
+	}
 
-body::-webkit-scrollbar {
-	width: 0.75em;
-}
+	body::-webkit-scrollbar {
+		width: 0.75em;
+	}
 
-body::-webkit-scrollbar-thumb {
-	@apply bg-primary-800;
-	@apply rounded-full outline outline-primary-850;
+	body::-webkit-scrollbar-thumb {
+		@apply bg-primary-800;
+		@apply rounded-full outline outline-primary-850;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	caption,
+	figcaption {
+		text-wrap: balance;
+	}
 }
 
 @layer components {
