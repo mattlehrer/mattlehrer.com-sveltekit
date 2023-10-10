@@ -46,18 +46,6 @@
 </footer>
 
 <style>
-	footer {
-		/* width: max(80%, 300px); */
-		/* margin: auto auto 0 auto; */
-		/* max-width: 1200px;
-		padding: 5rem 2rem 2rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		align-items: center;
-		opacity: 0.7; */
-	}
-
 	a {
 		text-decoration: none;
 	}
