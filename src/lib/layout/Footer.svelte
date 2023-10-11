@@ -16,7 +16,7 @@
 			</svg>
 			<span class="sr-only">Github</span>
 		</a>
-		<a href="https://definitely.social/mattlehrer/">
+		<a href="https://definitely.social/@mattlehrer/">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 				><path
 					fill="currentColor"
