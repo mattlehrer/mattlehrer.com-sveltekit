@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { title } from '$lib/config.js';
-	import { formatDate } from '$lib/utils';
+	import Hero from '$lib/layout/Hero.svelte';
 	import Posts from '$lib/layout/Posts.svelte';
 
 	export let data;
@@ -11,5 +11,7 @@
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
+
+<Hero />
 
 <Posts posts={data.posts} {MAX_POSTS} />

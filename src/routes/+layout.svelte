@@ -32,10 +32,10 @@
 	<meta name="description" content={description} />
 </svelte:head>
 
-<div class="mx-auto grid max-w-full px-8 sm:max-w-7xl">
+<div class="mx-auto grid max-w-full px-8 sm:max-w-7xl sm:px-16">
 	<Header />
 
-	<main class="py-8 sm:py-12">
+	<main>
 		<slot />
 	</main>
 
