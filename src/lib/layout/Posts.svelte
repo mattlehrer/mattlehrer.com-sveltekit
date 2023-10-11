@@ -8,8 +8,18 @@
 	export let MAX_POSTS = 3;
 </script>
 
-<section>
-	<h2 class="text-2xl tracking-tight sm:text-4xl">Recent blog posts</h2>
+<section class="wrapper py-8 sm:py-16" aria-labelledby="recent-posts-heading">
+	<div class="full-bleed relative bg-gradient-to-b from-inherit to-tertiary-200 py-8 sm:py-16">
+		<div class="absolute inset-0 flex items-center" aria-hidden="true">
+			<div class="w-full border-t border-primary-900"></div>
+		</div>
+		<h2 id="recent-posts-heading" class="relative flex justify-center">
+			<span
+				class="bg-primary-300 px-3 text-2xl font-semibold leading-6 text-primary-900 sm:text-4xl"
+				>Recent blog posts</span
+			>
+		</h2>
+	</div>
 	<ul class="mt-8 grid divide-y divide-tertiary-600">
 		{#each posts.slice(0, MAX_POSTS) as post}
 			<li>
@@ -31,11 +41,14 @@
 		{/each}
 	</ul>
 	{#if posts.length > MAX_POSTS}
-		<a
-			href="/blog"
-			class="mt-8 flex max-w-max items-center rounded bg-secondary-300 px-4 py-2 text-lg font-light text-tertiary-900 hover:bg-secondary-200"
-			>All Posts <ArrowRight class="ml-2 inline-block" /></a
-		>
+		<!-- div takes padding to align with the rest of the page  -->
+		<div>
+			<a
+				href="/blog"
+				class="mt-8 flex max-w-max items-center rounded bg-secondary-300 px-4 py-2 text-lg font-light text-tertiary-900 hover:bg-secondary-200"
+				>All Posts <ArrowRight class="ml-2 inline-block" /></a
+			>
+		</div>
 	{/if}
 </section>
 

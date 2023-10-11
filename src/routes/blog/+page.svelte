@@ -5,8 +5,7 @@
 	export let data;
 </script>
 
-<!-- Posts -->
-<section>
+<section class="wrapper">
 	<ul class="grid divide-y divide-primary-700">
 		{#each data.posts as post}
 			<li>

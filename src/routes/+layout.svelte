@@ -32,19 +32,20 @@
 	<meta name="description" content={description} />
 </svelte:head>
 
-<div class="mx-auto grid max-w-full px-8 sm:max-w-7xl sm:px-16">
+<div class="wrapper">
 	<Header />
 
-	<main>
+	<main class="full-bleed">
 		<slot />
 	</main>
 
 	<Footer />
 </div>
 
-<style>
+<style lang="postcss">
 	div {
 		min-height: 100dvh;
+		display: grid;
 		grid-template-rows: auto 1fr auto;
 	}
 </style>

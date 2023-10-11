@@ -8,6 +8,25 @@
 		min-height: 100dvh;
 	}
 
+	.wrapper {
+		display: grid;
+		grid-template-columns:
+			1fr
+			min(90ch, 100%)
+			1fr;
+	}
+
+	.wrapper > * {
+		grid-column: 2;
+		@apply px-8 sm:px-16;
+	}
+
+	.full-bleed {
+		width: 100%;
+		grid-column: 1 / 4;
+		@apply px-0;
+	}
+
 	body {
 		font-family: 'Plus Jakarta Sans Variable', sans-serif;
 		@apply bg-primary-300 text-primary-900;

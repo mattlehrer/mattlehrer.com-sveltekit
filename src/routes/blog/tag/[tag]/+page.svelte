@@ -4,8 +4,7 @@
 	export let data;
 </script>
 
-<!-- Posts -->
-<article>
+<article class="wrapper">
 	<h1 class="text-4xl">Posts tagged <b>{data.tag}</b></h1>
 	<ul class="mt-8 grid divide-y divide-primary-700">
 		{#each data.posts as post}
