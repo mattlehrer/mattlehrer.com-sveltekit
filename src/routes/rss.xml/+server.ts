@@ -2,8 +2,6 @@ import * as config from '$lib/config';
 import { create } from 'xmlbuilder2';
 import type { Post } from '$lib/types';
 
-export const prerender = true;
-
 export async function GET({ fetch }) {
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
