@@ -9,7 +9,7 @@
 </script>
 
 <section class="wrapper pb-8 sm:pb-16" aria-labelledby="recent-posts-heading">
-	<div class="full-bleed relative bg-gradient-to-b from-inherit to-tertiary-200 py-8 sm:py-16">
+	<div class="full-bleed relative py-8 sm:py-16">
 		<div class="absolute inset-0 flex items-center" aria-hidden="true">
 			<div class="w-full border-t border-primary-900"></div>
 		</div>
