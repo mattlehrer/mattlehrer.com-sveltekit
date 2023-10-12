@@ -60,6 +60,5 @@
 		display: inline-block;
 		height: 1.5rem;
 		width: 1.5rem;
-		margin-inline: 0.25rem;
 	}
 </style>
