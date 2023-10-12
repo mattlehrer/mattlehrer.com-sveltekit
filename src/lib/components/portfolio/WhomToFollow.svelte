@@ -10,7 +10,7 @@
 			<div
 				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
 			>
-				<div class="project-column-spacing lg:pt-4">
+				<div class="project-column-spacing self-center">
 					<div class="lg:max-w-lg">
 						<div class="flex items-center gap-6">
 							<h3 class=" text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
@@ -87,11 +87,11 @@
 						</figure>
 					</div>
 				</div>
-				<div class="project-image">
+				<div class="project-image self-center">
 					<img
 						src={wtf_screenshot}
 						alt="Product screenshot"
-						class="w-[48rem] max-w-none self-center shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+						class="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
 						width="2482"
 						height="1980"
 					/>
