@@ -1,5 +1,6 @@
 <script lang="ts">
 	import QuicksilverCre from '$lib/components/portfolio/QuicksilverCRE.svelte';
+	import StrangeAttractors from '$lib/components/portfolio/StrangeAttractors.svelte';
 	import WhomToFollow from '$lib/components/portfolio/WhomToFollow.svelte';
 </script>
 
@@ -19,5 +20,7 @@
 		<WhomToFollow />
 
 		<QuicksilverCre />
+
+		<StrangeAttractors />
 	</div>
 </section>
