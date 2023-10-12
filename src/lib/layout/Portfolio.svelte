@@ -5,7 +5,7 @@
 </script>
 
 <section class="wrapper py-8 sm:py-16" aria-labelledby="projects-heading">
-	<div class="full-bleed relative mb-8 sm:mb-16">
+	<div class="full-bleed relative">
 		<div class="absolute inset-0 flex items-center" aria-hidden="true">
 			<div class="w-full border-t border-primary-800"></div>
 		</div>
@@ -16,11 +16,19 @@
 		</h2>
 	</div>
 
-	<div class="projects full-bleed flex flex-col gap-8">
-		<WhomToFollow />
+	<div
+		class="projects full-bleed flex flex-col gap-1 bg-gradient-to-r from-tertiary-400 via-tertiary-700 to-tertiary-400"
+	>
+		<div class="bg-primary-300">
+			<WhomToFollow />
+		</div>
 
-		<QuicksilverCre />
+		<div class="bg-primary-300">
+			<QuicksilverCre />
+		</div>
 
-		<StrangeAttractors />
+		<div class="bg-primary-300">
+			<StrangeAttractors />
+		</div>
 	</div>
 </section>
