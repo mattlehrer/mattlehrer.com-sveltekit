@@ -10,14 +10,15 @@
 			<div class="w-full border-t border-primary-800"></div>
 		</div>
 		<h2 id="projects-heading" class="relative flex justify-center">
-			<span class="bg-primary-300 px-3 text-2xl font-semibold leading-6 text-gray-900 sm:text-4xl"
+			<span
+				class="bg-primary-300 px-8 text-3xl font-semibold leading-6 text-primary-850 sm:text-5xl"
 				>Projects</span
 			>
 		</h2>
 	</div>
 
 	<div
-		class="projects full-bleed flex flex-col gap-1 bg-gradient-to-r from-tertiary-400 via-tertiary-700 to-tertiary-400"
+		class="projects full-bleed flex flex-col gap-px bg-gradient-to-r from-tertiary-400 via-tertiary-700 to-tertiary-400"
 	>
 		<div class="bg-primary-300">
 			<WhomToFollow />

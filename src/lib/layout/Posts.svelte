@@ -15,7 +15,7 @@
 		</div>
 		<h2 id="recent-posts-heading" class="relative flex justify-center">
 			<span
-				class="bg-primary-300 px-3 text-2xl font-semibold leading-6 text-primary-900 sm:text-4xl"
+				class="bg-primary-300 px-8 text-3xl font-semibold leading-6 text-primary-850 sm:text-5xl"
 				>Recent blog posts</span
 			>
 		</h2>
