@@ -13,9 +13,7 @@
 				<div class="project-column-spacing self-center">
 					<div class="lg:max-w-lg">
 						<div class="flex items-center gap-6">
-							<h3 class=" text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
-								Strange Attractors
-							</h3>
+							<h3>Strange Attractors</h3>
 							<a class="w-8" href="https://app.quicksilvercre.com">
 								<Globe class="h-6 w-6 opacity-80" />
 								<span class="sr-only">Site link</span>

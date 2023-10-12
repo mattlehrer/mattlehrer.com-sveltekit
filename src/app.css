@@ -106,6 +106,10 @@
 	.projects > :nth-child(even) .project-image {
 		@apply flex items-start justify-end lg:order-first;
 	}
+
+	.projects h3 {
+		@apply text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl;
+	}
 }
 
 blockquote.twitter-tweet {
