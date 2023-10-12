@@ -90,6 +90,22 @@
 	a:has(svg) {
 		@apply p-1 transition-all duration-500 ease-in-out hover:rounded-full hover:bg-primary-800 hover:p-1 hover:text-primary-200;
 	}
+
+	.projects > :nth-child(odd) .project-column-spacing {
+		@apply lg:pr-8;
+	}
+
+	.projects > :nth-child(even) .project-column-spacing {
+		@apply lg:ml-auto lg:pl-4;
+	}
+
+	/* .projects > :nth-child(odd) .project-image {
+		nothing
+	} */
+
+	.projects > :nth-child(even) .project-image {
+		@apply flex items-start justify-end lg:order-first;
+	}
 }
 
 blockquote.twitter-tweet {

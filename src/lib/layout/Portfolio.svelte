@@ -1,8 +1,9 @@
 <script lang="ts">
+	import QuicksilverCre from '$lib/components/portfolio/QuicksilverCRE.svelte';
 	import WhomToFollow from '$lib/components/portfolio/WhomToFollow.svelte';
 </script>
 
-<section class="wrapper py-8 sm:py-24" aria-labelledby="projects-heading">
+<section class="wrapper py-8 sm:py-16" aria-labelledby="projects-heading">
 	<div class="full-bleed relative mb-8 sm:mb-16">
 		<div class="absolute inset-0 flex items-center" aria-hidden="true">
 			<div class="w-full border-t border-primary-800"></div>
@@ -14,5 +15,9 @@
 		</h2>
 	</div>
 
-	<WhomToFollow />
+	<div class="projects full-bleed flex flex-col gap-8">
+		<WhomToFollow />
+
+		<QuicksilverCre />
+	</div>
 </section>
