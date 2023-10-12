@@ -12,7 +12,7 @@
 			>
 				<div class="project-column-spacing lg:pt-4">
 					<div class="lg:max-w-lg">
-						<div class="flex items-center gap-8">
+						<div class="flex items-center gap-6">
 							<h3 class=" text-3xl font-bold tracking-tight text-primary-950 sm:text-4xl">
 								Whom To Follow
 							</h3>
