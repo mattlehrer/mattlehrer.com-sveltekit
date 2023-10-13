@@ -8,7 +8,7 @@ published: true
 ---
 
 <script>
-	import screenshot from './images/quicksilver-redesign-2021-06-30.png';
+	import screenshot from './images/quicksilver-redesign-2021-06-30.png?as=lg';
 </script>
 
 Around the time that Vivian was born last fall, I spent a lot of time reading and learning about marketing, sales, and getting a new business off the ground. I found things that I felt like I should have known a long time ago.
