@@ -6,6 +6,7 @@
 </script>
 
 <section class="wrapper">
+	<h1 class="text-3xl sm:text-5xl">Recent blog posts</h1>
 	<ul class="mt-8 grid divide-y divide-primary-700 sm:mt-16">
 		{#each data.posts as post}
 			<li>
