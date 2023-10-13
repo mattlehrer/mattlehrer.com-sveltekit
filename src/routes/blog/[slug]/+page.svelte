@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div class="wrapper">
-	<article class="prose prose-lg prose-primary mb-4 mt-8 sm:prose-xl">
+	<article class="prose prose-lg prose-primary sm:prose-xl">
 		<h1
 			class="post-title text-4xl capitalize leading-[1.2] sm:text-6xl sm:leading-[1.1]"
 			style={`view-transition-name: ${$page.params.slug}`}

@@ -6,7 +6,7 @@
 </script>
 
 <section class="wrapper">
-	<ul class="grid divide-y divide-primary-700">
+	<ul class="mt-8 grid divide-y divide-primary-700 sm:mt-16">
 		{#each data.posts as post}
 			<li>
 				<div>

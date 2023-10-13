@@ -10,10 +10,7 @@
 	<div class="full-bleed relative">
 		<DividerBehindHeading />
 		<h2 id="projects-heading" class="relative flex justify-center">
-			<span
-				class="main-bg-color px-3 text-3xl font-semibold leading-6 text-primary-850 sm:px-6 sm:text-5xl lg:px-8"
-				>Projects</span
-			>
+			<span>Projects</span>
 		</h2>
 	</div>
 

@@ -13,9 +13,7 @@
 	<div class="full-bleed relative py-8 sm:py-16">
 		<DividerBehindHeading />
 		<h2 id="recent-posts-heading" class="relative flex justify-center">
-			<span class="main-bg-color px-8 text-3xl font-semibold leading-6 text-primary-850 sm:text-5xl"
-				>Recent blog posts</span
-			>
+			<span>Recent blog posts</span>
 		</h2>
 	</div>
 	<ul class="mt-8 grid divide-y divide-tertiary-600">
