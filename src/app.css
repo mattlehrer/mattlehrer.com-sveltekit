@@ -27,9 +27,13 @@
 		@apply px-0;
 	}
 
+	.main-bg-color {
+		@apply bg-gradient-to-r from-primary-100 via-primary-50 to-primary-100 bg-fixed;
+	}
+
 	body {
 		font-family: 'Plus Jakarta Sans Variable', sans-serif;
-		@apply bg-primary-300 text-primary-900;
+		@apply main-bg-color text-primary-900;
 
 		overflow-y: scroll;
 		scrollbar-gutter: stable both-edges;
@@ -37,11 +41,12 @@
 
 	body::-webkit-scrollbar {
 		width: 0.75em;
+		@apply bg-primary-100;
 	}
 
 	body::-webkit-scrollbar-thumb {
-		@apply bg-primary-800;
-		@apply rounded-full outline outline-primary-850;
+		@apply bg-primary-700;
+		@apply rounded-full outline outline-primary-800;
 	}
 
 	@font-face {
@@ -87,7 +92,8 @@
 		text-wrap: balance;
 	}
 
-	a:has(svg) {
+	.projects a:has(svg),
+	footer a:has(svg) {
 		@apply p-1 transition-all duration-500 ease-in-out hover:rounded-full hover:bg-primary-800 hover:p-1 hover:text-primary-200;
 	}
 
@@ -109,6 +115,18 @@
 
 	.projects h3 {
 		@apply text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl;
+	}
+
+	.projects dl svg {
+		@apply absolute left-1 top-1 h-6 w-6 text-secondary-700;
+	}
+
+	.projects dl > div {
+		@apply relative pl-10;
+	}
+
+	.tag-colors {
+		@apply bg-secondary-200 text-tertiary-900 transition duration-300 ease-in-out hover:bg-secondary-600 hover:text-secondary-100;
 	}
 }
 

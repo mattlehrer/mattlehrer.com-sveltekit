@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DividerBehindHeading from '$lib/components/DividerBehindHeading.svelte';
 	import Tags from '$lib/components/Tags.svelte';
 	import type { Post } from '$lib/types';
 	import { formatDate } from '$lib/utils';
@@ -10,12 +11,9 @@
 
 <section class="wrapper pb-8 sm:pb-16" aria-labelledby="recent-posts-heading">
 	<div class="full-bleed relative py-8 sm:py-16">
-		<div class="absolute inset-0 flex items-center" aria-hidden="true">
-			<div class="w-full border-t border-primary-900"></div>
-		</div>
+		<DividerBehindHeading />
 		<h2 id="recent-posts-heading" class="relative flex justify-center">
-			<span
-				class="bg-primary-300 px-8 text-3xl font-semibold leading-6 text-primary-850 sm:text-5xl"
+			<span class="main-bg-color px-8 text-3xl font-semibold leading-6 text-primary-850 sm:text-5xl"
 				>Recent blog posts</span
 			>
 		</h2>
@@ -45,7 +43,7 @@
 		<div>
 			<a
 				href="/blog"
-				class="mt-8 flex max-w-max items-center rounded bg-secondary-300 px-4 py-2 text-lg font-light text-tertiary-900 hover:bg-secondary-200"
+				class="tag-colors mt-8 flex max-w-max items-center rounded px-4 py-2 text-lg font-light hover:scale-110"
 				>All Posts <ArrowRight class="ml-2 inline-block" /></a
 			>
 		</div>

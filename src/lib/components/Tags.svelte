@@ -6,7 +6,7 @@
 	{#each tags as tag}
 		<a
 			href={'/blog/tag/' + tag}
-			class="mr-4 mt-4 inline-block rounded bg-secondary-300 px-2 py-1 text-sm font-light text-tertiary-900 no-underline hover:bg-secondary-200"
+			class="tag-colors mr-4 mt-4 inline-block rounded px-2 py-1 text-sm font-light no-underline"
 			>{tag}</a
 		>
 	{/each}

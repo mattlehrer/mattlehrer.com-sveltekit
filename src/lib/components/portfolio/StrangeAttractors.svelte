@@ -30,12 +30,9 @@
 						</p>
 
 						<dl class="mt-10 max-w-xl space-y-8 text-lg leading-7 text-primary-900 lg:max-w-none">
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Compass
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>
+									<Compass aria-hidden="true" />
 									Why?
 								</dt>
 								<dd class="inline">
@@ -44,12 +41,9 @@
 									visualizations to be beautiful, mesmerizing and meditative.
 								</dd>
 							</div>
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Split
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>Challenges.
+									<Split aria-hidden="true" />Challenges.
 								</dt>
 								<dd class="inline">
 									The camera angles and perspective involved in 3D rendering is not intuitive for

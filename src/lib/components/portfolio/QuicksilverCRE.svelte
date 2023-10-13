@@ -4,7 +4,7 @@
 	import screenshot_mobile from './quicksilvercre_screenshot_mobile.png';
 </script>
 
-<div class="full-bleed">
+<div class="full-bleed bg-primary-200">
 	<div class="overflow-hidden py-24 sm:py-40">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div
@@ -25,12 +25,9 @@
 						</p>
 
 						<dl class="mt-10 max-w-xl space-y-8 text-lg leading-7 text-primary-900 lg:max-w-none">
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Compass
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>
+									<Compass aria-hidden="true" />
 									Why?
 								</dt>
 								<dd class="inline">
@@ -40,12 +37,9 @@
 									instead of the many hours it would take to create a model in Excel or Argus.
 								</dd>
 							</div>
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Split
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>Challenges.
+									<Split aria-hidden="true" />Challenges.
 								</dt>
 								<dd class="inline">
 									Input masking and form validation were new to me at the start of this project. I
@@ -63,7 +57,7 @@
 					<img
 						src={screenshot_desktop}
 						alt="Product screenshot desktop"
-						class="hidden w-[44rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:block md:-ml-4 lg:-ml-0 lg:w-[48rem]"
+						class="hidden w-[44rem] max-w-none shadow-xl ring-1 ring-gray-500/20 sm:block md:-ml-4 lg:-ml-0 lg:w-[48rem]"
 						width="2084"
 						height="1548"
 					/>

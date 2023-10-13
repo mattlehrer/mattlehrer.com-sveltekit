@@ -28,12 +28,9 @@
 						</p>
 
 						<dl class="mt-10 max-w-xl space-y-8 text-lg leading-7 text-primary-900 lg:max-w-none">
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Compass
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>
+									<Compass aria-hidden="true" />
 									Why?
 								</dt>
 								<dd class="inline">
@@ -44,12 +41,9 @@
 									Fediverse overall.
 								</dd>
 							</div>
-							<div class="relative pl-9">
+							<div>
 								<dt class="inline font-semibold text-primary-900">
-									<Split
-										aria-hidden="true"
-										class="absolute left-1 top-1 h-5 w-5 text-tertiary-700"
-									/>Challenges.
+									<Split aria-hidden="true" />Challenges.
 								</dt>
 								<dd class="inline">
 									The site is resource intensive. Experiments with virtual lists did not preserve
@@ -61,7 +55,7 @@
 							</div>
 						</dl>
 						<figure
-							class="mt-12 max-w-xl border-l-2 border-primary-700 bg-primary-200 py-3 pl-8 pr-4 text-primary-800 lg:max-w-none"
+							class="mt-12 max-w-xl border-l-2 border-secondary-700 bg-secondary-200 py-3 pl-8 pr-4 text-secondary-800 lg:max-w-none"
 						>
 							<blockquote class="text-lg leading-7">
 								<p>
@@ -69,9 +63,10 @@
 									follow but didn't realize was here.”
 								</p>
 							</blockquote>
-							<figcaption class="mt-6 leading-6">
+							<figcaption class="mt-6 max-w-max leading-6">
 								<a
-									class="flex items-center gap-x-4"
+									class="flex items-center gap-x-4 underline transition-all duration-200 ease-in-out hover:scale-110 hover:text-secondary-950"
+									target="_blank"
 									href="https://mastodon.social/@mmasnick/109805060108408385"
 								>
 									<img
@@ -79,7 +74,7 @@
 										alt="Mike Masnick avatar"
 										class="h-8 w-8 flex-none rounded-full"
 									/>
-									<div class="font-semibold text-primary-900">Mike Masnick</div>
+									<div class="font-semibold text-secondary-900">Mike Masnick</div>
 								</a>
 							</figcaption>
 						</figure>
