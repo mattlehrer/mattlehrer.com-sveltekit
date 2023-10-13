@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Compass, Github, Globe, Split } from 'lucide-svelte';
-	import wtf_screenshot from './whom_to_follow_interfluidity.png';
-	import mike_masnick_avatar from './mike_masnick.png';
+	import wtf_screenshot from './images/whom_to_follow_interfluidity.png?format=avif;webp;png&as=lg';
+	import mike_masnick_avatar from './images/mike_masnick.png';
+	import Img from '@zerodevx/svelte-img';
 </script>
 
 <div class="full-bleed">
@@ -81,12 +82,11 @@
 					</div>
 				</div>
 				<div class="project-image self-center">
-					<img
+					<Img
 						src={wtf_screenshot}
 						alt="Product screenshot"
+						loading="eager"
 						class="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-						width="2482"
-						height="1980"
 					/>
 				</div>
 			</div>

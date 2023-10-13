@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Compass, Globe, Split } from 'lucide-svelte';
-	import screenshot_desktop from './quicksilvercre_screenshot.png';
-	import screenshot_mobile from './quicksilvercre_screenshot_mobile.png';
+	import screenshot_desktop from './images/quicksilvercre_screenshot.png?format=avif;webp;png&as=lg';
+	import screenshot_mobile from './images/quicksilvercre_screenshot_mobile.png?format=avif;webp;png&as=sm';
+	import Img from '@zerodevx/svelte-img';
 </script>
 
 <div class="full-bleed bg-primary-200">
@@ -54,19 +55,15 @@
 					</div>
 				</div>
 				<div class="project-image self-center">
-					<img
+					<Img
 						src={screenshot_desktop}
 						alt="Product screenshot desktop"
 						class="hidden w-[44rem] max-w-none shadow-xl ring-1 ring-gray-500/20 sm:block md:-ml-4 lg:-ml-0 lg:w-[48rem]"
-						width="2084"
-						height="1548"
 					/>
-					<img
+					<Img
 						src={screenshot_mobile}
 						alt="Product screenshot mobile"
 						class="w-[24rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:hidden md:-ml-4 lg:-ml-0"
-						width="780"
-						height="1554"
 					/>
 				</div>
 			</div>

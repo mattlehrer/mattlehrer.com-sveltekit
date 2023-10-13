@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Compass, Github, Globe, Split } from 'lucide-svelte';
-	import screenshot_desktop from './strange_attractors_desktop.png';
-	import screenshot_mobile from './strange_attractors_mobile.png';
+	import screenshot_desktop from './images/strange_attractors_desktop.png?format=avif;webp;png&as=lg';
+	import screenshot_mobile from './images/strange_attractors_mobile.png?format=avif;webp;png&as=sm';
+	import Img from '@zerodevx/svelte-img';
 </script>
 
 <div class="full-bleed">
@@ -55,19 +56,15 @@
 					</div>
 				</div>
 				<div class="project-image self-center">
-					<img
+					<Img
 						src={screenshot_desktop}
 						alt="Product screenshot desktop"
 						class="hidden w-[36rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:block md:-ml-4 lg:-ml-0 lg:w-[38rem]"
-						width="1764"
-						height="1590"
 					/>
-					<img
+					<Img
 						src={screenshot_mobile}
 						alt="Product screenshot mobile"
 						class="w-[20rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:hidden md:-ml-4 lg:-ml-0"
-						width="772"
-						height="1150"
 					/>
 				</div>
 			</div>
