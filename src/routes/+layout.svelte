@@ -23,7 +23,7 @@
 		});
 	});
 
-	const hexTheme = new Color(colors.primary[300]).to('srgb').toString({ format: 'hex' });
+	const hexTheme = new Color(colors.primary[100]).to('srgb').toString({ format: 'hex' });
 </script>
 
 <svelte:head>
