@@ -12,7 +12,7 @@
 				<div>
 					<a
 						href={'/blog/' + post.slug}
-						class="title text-lg font-semibold capitalize"
+						class="text-lg font-semibold capitalize focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500 sm:text-xl"
 						style={`view-transition-name: ${post.slug}`}>{post.title}</a
 					>
 					<p class="font-extralight text-primary-900">{formatDate(post.date)}</p>
@@ -24,7 +24,7 @@
 							{#each post.categories as category}
 								<a
 									href={'/blog/tag/' + category}
-									class="mr-4 mt-4 inline-block rounded bg-secondary-300 px-2 py-1 text-sm font-light text-tertiary-900 hover:bg-secondary-200"
+									class="tag-colors mr-4 mt-4 inline-block rounded px-2 py-1 text-sm font-light"
 									>{category}</a
 								>
 							{/each}

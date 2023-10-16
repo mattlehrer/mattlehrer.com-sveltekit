@@ -96,9 +96,40 @@
 		@apply main-bg-color px-3 text-3xl font-semibold leading-6 text-primary-850 sm:px-6 sm:text-5xl lg:px-8;
 	}
 
-	p a,
-	li a {
-		@apply focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500;
+	li {
+		--underline-width: 6px;
+	}
+
+	li > div > a {
+		text-decoration: none;
+		text-decoration: none;
+		background-image: linear-gradient(theme(colors.primary.800), theme(colors.primary.800)),
+			linear-gradient(theme(colors.primary.400/0.7), theme(colors.primary.400/0.7)),
+			linear-gradient(theme(colors.secondary.500/0.7), theme(colors.secondary.500/0.7));
+		background-size:
+			20px var(--underline-width),
+			100% var(--underline-width),
+			0 var(--underline-width);
+		background-position:
+			calc(20px * -1) 100%,
+			100% 100%,
+			0 100%;
+		background-repeat: no-repeat;
+		transition:
+			background-size 500ms linear,
+			background-position 500ms linear;
+		text-decoration-skip-ink: none;
+	}
+
+	li > div > a:hover {
+		background-size:
+			20px var(--underline-width),
+			0% var(--underline-width),
+			100% var(--underline-width);
+		background-position:
+			calc(100% + 20px) 100%,
+			100% 100%,
+			0 100%;
 	}
 
 	.projects a:has(svg),
