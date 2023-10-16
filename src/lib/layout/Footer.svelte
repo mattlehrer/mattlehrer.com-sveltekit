@@ -25,9 +25,9 @@
 			>
 			<span class="sr-only">Mastodon</span>
 		</a>
-		<a class="block sm:hidden" href="/rss.xml" target="_blank"
+		<a class="block sm:hidden" href="/rss.xml" target="_blank" rel="noopener"
 			><Rss />
-			<span class="sr-only">RSS Feed</span>
+			<span class="sr-only">Mastodon</span>
 		</a>
 	</div>
 	<div class="made">
@@ -43,7 +43,7 @@
 		</svg> in Malmö
 	</div>
 	<div class="hidden items-center gap-4 sm:flex">
-		<a href="/rss.xml" target="_blank">
+		<a href="/rss.xml" target="_blank" rel="noopener">
 			<Rss />
 			<span class="sr-only">RSS Feed</span>
 		</a>

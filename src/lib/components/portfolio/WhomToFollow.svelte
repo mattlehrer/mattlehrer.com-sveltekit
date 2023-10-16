@@ -68,6 +68,7 @@
 								<a
 									class="-ml-1 flex items-center gap-x-3 rounded pl-1 pr-2 underline transition-all duration-200 ease-in-out hover:scale-110 hover:text-secondary-950 focus-visible:rounded-lg focus-visible:bg-secondary-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-secondary-700"
 									target="_blank"
+									rel="noopener"
 									href="https://mastodon.social/@mmasnick/109805060108408385"
 								>
 									<img
