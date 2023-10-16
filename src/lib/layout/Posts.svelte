@@ -22,10 +22,10 @@
 				<div>
 					<a
 						href={'/blog/' + post.slug}
-						class="text-lg font-semibold capitalize"
+						class="text-lg font-medium capitalize sm:text-xl"
 						style={`view-transition-name: ${post.slug}`}>{post.title}</a
 					>
-					<p class="font-extralight text-primary-900">{formatDate(post.date)}</p>
+					<p class="mt-2 font-extralight text-primary-900">{formatDate(post.date)}</p>
 					{#if post.description}
 						<p class="mt-3">{post.description}</p>
 					{/if}
@@ -41,7 +41,7 @@
 		<div>
 			<a
 				href="/blog"
-				class="tag-colors mt-8 flex max-w-max items-center rounded px-4 py-2 text-lg font-light hover:scale-110"
+				class="tag-colors mt-8 flex max-w-max items-center rounded px-4 py-2 text-lg font-light hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
 				>All Posts <ArrowRight class="ml-2 inline-block" /></a
 			>
 		</div>
@@ -50,7 +50,7 @@
 
 <style lang="postcss">
 	li > div {
-		margin-block: 1.5rem;
+		margin-block: 1.75rem;
 	}
 
 	li:first-child > div {
