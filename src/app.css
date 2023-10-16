@@ -8,6 +8,10 @@
 		min-height: 100dvh;
 	}
 
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
+
 	.wrapper {
 		display: grid;
 		grid-template-columns:
