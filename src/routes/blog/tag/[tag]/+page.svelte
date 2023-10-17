@@ -12,7 +12,7 @@
 				<div>
 					<a
 						href={'/blog/' + post.slug}
-						class="text-lg font-semibold capitalize focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500 sm:text-xl"
+						class="text-lg font-semibold capitalize sm:text-xl"
 						style={`view-transition-name: ${post.slug}`}>{post.title}</a
 					>
 					<p class="font-extralight text-primary-900">{formatDate(post.date)}</p>

@@ -123,6 +123,7 @@
 			background-size 500ms linear,
 			background-position 500ms linear;
 		text-decoration-skip-ink: none;
+		@apply focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500;
 	}
 
 	li > div > a:hover {
