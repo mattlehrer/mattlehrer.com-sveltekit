@@ -6,10 +6,10 @@
 	import WhomToFollow from '$lib/components/portfolio/WhomToFollow.svelte';
 </script>
 
-<section class="wrapper py-8 sm:py-16" aria-labelledby="projects-heading">
+<section class="wrapper py-8 sm:py-16" aria-labelledby="projects">
 	<div class="full-bleed relative">
 		<DividerBehindHeading />
-		<h2 id="projects-heading" class="relative flex justify-center">
+		<h2 id="projects" class="relative flex justify-center">
 			<span>Projects</span>
 		</h2>
 	</div>
