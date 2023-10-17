@@ -27,7 +27,7 @@
 		</a>
 		<a class="block sm:hidden" href="/rss.xml" target="_blank" rel="noopener"
 			><Rss />
-			<span class="sr-only">Mastodon</span>
+			<span class="sr-only">RSS Feed</span>
 		</a>
 	</div>
 	<div class="made">
