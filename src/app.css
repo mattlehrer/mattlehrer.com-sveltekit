@@ -104,7 +104,7 @@
 		--underline-width: 6px;
 	}
 
-	li > div > a {
+	:is(li div, li > span) > a {
 		text-decoration: none;
 		text-decoration: none;
 		background-image: linear-gradient(theme(colors.primary.800), theme(colors.primary.800)),
@@ -126,7 +126,7 @@
 		@apply focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500;
 	}
 
-	li > div > a:hover {
+	:is(li div, li > span) > a:hover {
 		background-size:
 			20px var(--underline-width),
 			0% var(--underline-width),
@@ -137,8 +137,7 @@
 			0 100%;
 	}
 
-	.projects a:has(svg),
-	footer a:has(svg) {
+	:is(.projects, footer) a:has(svg) {
 		@apply p-1;
 		@apply transition-all duration-300 ease-in-out;
 		@apply hover:rounded-full hover:bg-tertiary-700 hover:text-tertiary-100;
@@ -174,7 +173,7 @@
 	}
 
 	.tag-colors {
-		@apply bg-secondary-200 text-tertiary-900 transition duration-300 ease-in-out hover:bg-secondary-600 hover:text-secondary-100 focus-visible:outline-secondary-600;
+		@apply bg-secondary-200 bg-none text-tertiary-900 transition duration-300 ease-in-out hover:bg-secondary-600 hover:text-secondary-100 focus-visible:outline-secondary-600;
 	}
 }
 
