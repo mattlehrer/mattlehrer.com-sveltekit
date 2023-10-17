@@ -16,7 +16,7 @@
 		</p>
 		<p>
 			At Malmö University, he learned about the pillars of sustainability, design thinking, and
-			innovation. <a href="http://www.diva-portal.org/smash/record.jsf?pid=diva2:1797108"
+			innovation. <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2:1797108"
 				>His thesis developed a method</a
 			>, building on Dijkstra's algorithm, for determining which electric vehicle charging stops
 			result in the lowest possible charging cost for a given route. The method was tested on
