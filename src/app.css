@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--underline-width: 6px;
+}
+
 @layer base {
 	html,
 	body {
@@ -100,12 +104,7 @@
 		@apply main-bg-color px-3 text-3xl font-semibold leading-6 text-primary-850 sm:px-6 sm:text-5xl lg:px-8;
 	}
 
-	li {
-		--underline-width: 6px;
-	}
-
-	:is(li div, li > span) > a {
-		text-decoration: none;
+	:is(li div, li > span, p) > a {
 		text-decoration: none;
 		background-image: linear-gradient(theme(colors.primary.800), theme(colors.primary.800)),
 			linear-gradient(theme(colors.primary.400/0.7), theme(colors.primary.400/0.7)),
@@ -126,7 +125,7 @@
 		@apply focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary-500;
 	}
 
-	:is(li div, li > span) > a:hover {
+	:is(li div, li > span, p) > a:hover {
 		background-size:
 			20px var(--underline-width),
 			0% var(--underline-width),
