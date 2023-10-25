@@ -32,3 +32,6 @@ export const GET: RequestHandler = async () => {
 		},
 	);
 };
+
+export const prerender = false;
+
