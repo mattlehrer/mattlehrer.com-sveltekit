@@ -1,9 +1,13 @@
 <script lang="ts">
-	import { title } from '$lib/config';
+	import { title as siteTitle, url } from '$lib/config';
+
+	const title = "Matt Lehrer's work and project timeline";
 </script>
 
 <svelte:head>
-	<title>Work history | {title}</title>
+	<title>Work history | {siteTitle}</title>
+	<meta content="{url}api/og?title={title}" property="og:image" />
+	<meta content={title} property="og:image:alt" />
 </svelte:head>
 
 <article class="wrapper">

@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { title } from '$lib/config';
+	import { title, url } from '$lib/config';
 </script>
 
 <svelte:head>
 	<title>About | {title}</title>
+	<meta content="{url}api/og?title=About Matt Lehrer" property="og:image" />
+	<meta content="About Matt Lehrer" property="og:image:alt" />
 </svelte:head>
 
 <div class="wrapper">
