@@ -33,15 +33,19 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<div class="wrapper">
-	<Header />
+{#if $page.route?.id?.startsWith('/api/og/render')}
+	<slot />
+{:else}
+	<div class="wrapper">
+		<Header />
 
-	<main class="full-bleed">
-		<slot />
-	</main>
+		<main class="full-bleed">
+			<slot />
+		</main>
 
-	<Footer />
-</div>
+		<Footer />
+	</div>
+{/if}
 
 <style lang="postcss">
 	div {
