@@ -6,6 +6,8 @@ import type { RequestHandler } from './$types';
 import Card from '$lib/components/og/OGCard.svelte';
 import type { SvelteComponent } from 'svelte';
 
+export const prerender = false;
+
 const width = 1200;
 const height = 630;
 
