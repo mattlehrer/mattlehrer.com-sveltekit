@@ -1,8 +1,17 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import { url } from '$lib/config';
 
 	export let data;
+
+	const title = `Recent blog posts tagged ${data.tag}`;
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta content="{url}api/og?title={title}" property="og:image" />
+	<meta content={title} property="og:image:alt" />
+</svelte:head>
 
 <article class="wrapper">
 	<h1 class="text-4xl">Posts tagged <b>{data.tag}</b></h1>

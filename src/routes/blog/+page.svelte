@@ -1,9 +1,16 @@
 <script lang="ts">
+	import { title, url } from '$lib/config.js';
 	import Tags from '$lib/components/Tags.svelte';
 	import { formatDate } from '$lib/utils';
 
 	export let data;
 </script>
+
+<svelte:head>
+	<title>Recent blog posts | {title}</title>
+	<meta content="{url}api/og?title=Recent blog posts by Matt Lehrer" property="og:image" />
+	<meta content="Recent blog posts by Matt Lehrer" property="og:image:alt" />
+</svelte:head>
 
 <section class="wrapper">
 	<h1 class="text-3xl sm:text-5xl">Recent blog posts</h1>

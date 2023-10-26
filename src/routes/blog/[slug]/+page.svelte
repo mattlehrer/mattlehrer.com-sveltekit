@@ -3,6 +3,7 @@
 	import Tags from '$lib/components/Tags.svelte';
 	import { title } from '$lib/config.js';
 	import { formatDate } from '$lib/utils';
+	import { url } from '$lib/config';
 
 	export let data;
 </script>
@@ -11,6 +12,8 @@
 	<title>{data.meta.title} | {title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta content="{url}api/og?title={data.meta.title}" property="og:image" />
+	<meta content={data.meta.title} property="og:image:alt" />
 </svelte:head>
 
 <div class="wrapper">

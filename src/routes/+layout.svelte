@@ -27,9 +27,10 @@
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={`${url}${$page.url.pathname}`} />
+	<link rel="canonical" href={`${url.slice(0, url.length - 1)}${$page.url.pathname}`} />
 	<meta name="theme-color" content={hexTheme} />
 	<meta name="description" content={description} />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="wrapper">
