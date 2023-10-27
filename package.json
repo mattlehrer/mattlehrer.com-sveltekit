@@ -43,6 +43,7 @@
 		"vite": "^4.5.0"
 	},
 	"dependencies": {
+		"@cloudflare/puppeteer": "^0.0.5",
 		"@fontsource-variable/plus-jakarta-sans": "^5.0.18",
 		"@fontsource-variable/source-code-pro": "^5.0.16",
 		"@sparticuz/chromium": "^118.0.0",
