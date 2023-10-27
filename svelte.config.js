@@ -10,6 +10,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			entries: ['*', '/.well-known/webfinger'],
+		},
 	},
 };
 
