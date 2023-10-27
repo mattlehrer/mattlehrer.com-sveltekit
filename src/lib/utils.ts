@@ -6,3 +6,5 @@ export function formatDate(date: string, dateStyle: DateStyle = 'medium', locale
 	const dateFormatter = new Intl.DateTimeFormat(locales, { dateStyle });
 	return dateFormatter.format(dateToFormat);
 }
+
+export const wait = (delay: number) => new Promise((resolve) => setTimeout(resolve, delay));
