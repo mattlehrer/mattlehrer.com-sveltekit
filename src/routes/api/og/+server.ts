@@ -6,9 +6,8 @@ const height = 630;
 
 export const GET: RequestHandler = async ({ platform, url }) => {
 	const title = url.searchParams.get('title') ?? undefined;
-	const browser = await puppeteer.launch({
-		fetch: platform?.env?.MYBROWSER,
-	});
+
+	const browser = await puppeteer.launch(platform?.env.MYBROWSER);
 	const page = await browser.newPage();
 	await page.setViewport({ width, height, deviceScaleFactor: 1.5 });
 
