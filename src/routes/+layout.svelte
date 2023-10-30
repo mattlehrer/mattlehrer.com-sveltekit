@@ -33,7 +33,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-{#if $page.route?.id?.startsWith('/og')}
+{#if $page.route?.id?.startsWith('/api/og/render')}
 	<slot />
 {:else}
 	<div class="wrapper">

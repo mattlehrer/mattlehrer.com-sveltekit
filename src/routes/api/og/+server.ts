@@ -12,7 +12,7 @@ export const GET: RequestHandler = async ({ env, url }) => {
 	const page = await browser.newPage();
 	await page.setViewport({ width, height, deviceScaleFactor: 1.5 });
 
-	await page.goto(url + '/og?title=' + title);
+	await page.goto(url + '/api/og/render?title=' + title);
 	const img = (await page.screenshot({ type: 'png' })) as Buffer;
 	await browser.close();
 
