@@ -1,3 +1,4 @@
-bindings = [
- { name = "my_browser” type = "browser" }
-]
+node_compat = true
+workers_dev = true
+
+browser = { binding = "MYBROWSER" }
