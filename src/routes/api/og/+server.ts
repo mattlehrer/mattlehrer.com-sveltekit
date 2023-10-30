@@ -4,10 +4,10 @@ import type { RequestHandler } from './$types';
 const width = 1200;
 const height = 630;
 
-export const GET: RequestHandler = async ({ env, url }) => {
+export const GET: RequestHandler = async ({ platform, url }) => {
 	const title = url.searchParams.get('title') ?? undefined;
 	const browser = await puppeteer.launch({
-		fetch: env.MYBROWSER,
+		fetch: platform?.env?.MYBROWSER,
 	});
 	const page = await browser.newPage();
 	await page.setViewport({ width, height, deviceScaleFactor: 1.5 });
