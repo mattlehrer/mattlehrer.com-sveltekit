@@ -10,11 +10,6 @@
 </div>
 
 <style>
-	@font-face {
-		font-family: 'Plus Jakarta Sans';
-		src: url('/src/lib/components/og/PlusJakartaSans-Regular.ttf');
-	}
-
 	.card {
 		height: 630px;
 		width: 1200px;

@@ -1,5 +1,5 @@
-node_compat = true
-workers_dev = true
-
+name = "mattlehrer-com-sveltekit"
+main = "src/index.ts"
 compatibility_date = "2023-10-06"
+compatibility_flags = [ "nodejs_compat" ]
 browser = { binding = "MYBROWSER" }
