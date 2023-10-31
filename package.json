@@ -12,8 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --write .",
-		"pages:dev": "wrangler pages dev --compatibility-date=2023-10-25 --proxy 5173 -- npm run dev",
-		"pages:deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare"
+		"pages:dev": "wrangler pages dev --compatibility-flags=\"nodejs_compat\" --compatibility-date=2023-10-25 --proxy 5173 -- npm run dev"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20231025.0",
