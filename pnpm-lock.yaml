@@ -45,7 +45,7 @@ devDependencies:
     version: 2.1.0(@sveltejs/kit@1.27.0)
   '@sveltejs/adapter-cloudflare':
     specifier: github:mattlehrer/adapter-cloudflare-node-compat
-    version: github.com/mattlehrer/adapter-cloudflare-node-compat/701bf99fc1af964c9778fbee5a1bf7886e47ad40(@sveltejs/kit@1.27.0)
+    version: github.com/mattlehrer/adapter-cloudflare-node-compat/eb2a88aa2f8a1840e785aeae9d3462dd2c635cf2(@sveltejs/kit@1.27.0)
   '@sveltejs/kit':
     specifier: ^1.27.0
     version: 1.27.0(svelte@4.2.2)(vite@4.5.0)
@@ -215,6 +215,16 @@ packages:
       esbuild: '*'
     dependencies:
       esbuild: 0.17.19
+      escape-string-regexp: 4.0.0
+      rollup-plugin-node-polyfills: 0.2.1
+    dev: true
+
+  /@esbuild-plugins/node-modules-polyfill@0.2.2(esbuild@0.18.20):
+    resolution: {integrity: sha512-LXV7QsWJxRuMYvKbiznh+U1ilIop3g2TeKRzUxOG5X3YITc8JyyTa90BmLwqqv0YnX4v32CSlG+vsziZp9dMvA==}
+    peerDependencies:
+      esbuild: '*'
+    dependencies:
+      esbuild: 0.18.20
       escape-string-regexp: 4.0.0
       rollup-plugin-node-polyfills: 0.2.1
     dev: true
@@ -3664,15 +3674,17 @@ packages:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: true
 
-  github.com/mattlehrer/adapter-cloudflare-node-compat/701bf99fc1af964c9778fbee5a1bf7886e47ad40(@sveltejs/kit@1.27.0):
-    resolution: {tarball: https://codeload.github.com/mattlehrer/adapter-cloudflare-node-compat/tar.gz/701bf99fc1af964c9778fbee5a1bf7886e47ad40}
-    id: github.com/mattlehrer/adapter-cloudflare-node-compat/701bf99fc1af964c9778fbee5a1bf7886e47ad40
+  github.com/mattlehrer/adapter-cloudflare-node-compat/eb2a88aa2f8a1840e785aeae9d3462dd2c635cf2(@sveltejs/kit@1.27.0):
+    resolution: {tarball: https://codeload.github.com/mattlehrer/adapter-cloudflare-node-compat/tar.gz/eb2a88aa2f8a1840e785aeae9d3462dd2c635cf2}
+    id: github.com/mattlehrer/adapter-cloudflare-node-compat/eb2a88aa2f8a1840e785aeae9d3462dd2c635cf2
     name: '@sveltejs/adapter-cloudflare'
     version: 2.3.3
+    requiresBuild: true
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
       '@cloudflare/workers-types': 4.20231025.0
+      '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.18.20)
       '@sveltejs/kit': 1.27.0(svelte@4.2.2)(vite@4.5.0)
       esbuild: 0.18.20
       worktop: 0.8.0-next.15
