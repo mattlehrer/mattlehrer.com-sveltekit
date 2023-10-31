@@ -21,7 +21,7 @@
 
 		background-image: linear-gradient(to bottom right, #164c5f, #21708d);
 
-		font-family: 'Plus Jakarta Sans';
+		/* font-family: 'Plus Jakarta Sans'; */
 		color: #f1c989;
 	}
 
