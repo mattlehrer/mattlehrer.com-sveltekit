@@ -47,6 +47,13 @@
 		scrollbar-gutter: stable both-edges;
 	}
 
+	::selection {
+		@apply bg-primary-800 text-primary-200;
+	}
+	::-moz-selection {
+		@apply bg-primary-800 text-primary-200;
+	}
+
 	body::-webkit-scrollbar {
 		width: 0.75em;
 		@apply bg-primary-100;
