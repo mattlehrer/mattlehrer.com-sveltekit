@@ -3,7 +3,7 @@ import Card from '$lib/components/og/OGCard.svelte';
 import type { RequestHandler } from './$types';
 import { html as toReactNode } from 'satori-html';
 import type { SvelteComponent } from 'svelte';
-import PlusJakartaSans from '$lib/components/og/PlusJakartaSans-Regular.ttf';
+// import PlusJakartaSans from '$lib/components/og/PlusJakartaSans-Regular.ttf';
 
 export const prerender = false;
 
@@ -16,13 +16,13 @@ export const GET: RequestHandler = async ({ url }) => {
 	const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
 
 	return new ImageResponse(element, {
-		fonts: [
-			{
-				name: 'Plus Jakarta Sans',
-				data: Buffer.from(PlusJakartaSans),
-				style: 'normal',
-			},
-		],
+		// fonts: [
+		// 	{
+		// 		name: 'Plus Jakarta Sans',
+		// 		data: Buffer.from(PlusJakartaSans),
+		// 		style: 'normal',
+		// 	},
+		// ],
 		width: width,
 		height: height,
 		headers: {
