@@ -1,22 +1,19 @@
-import { ImageResponse } from '@cloudflare/pages-plugin-vercel-og/api';
-import Card from '$lib/components/og/OGCard.svelte';
 import type { RequestHandler } from './$types';
-import { html as toReactNode } from 'satori-html';
-import type { SvelteComponent } from 'svelte';
 
 export const prerender = false;
 
-const width = 1200;
-const height = 630;
-
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ platform, url }) => {
 	const title = url.searchParams.get('title') ?? undefined;
-	const result = (Card as unknown as SvelteComponent).render({ title });
-	const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
 
-	return new ImageResponse(element, {
-		width: width,
-		height: height,
+	const req = new Request(`https://mattlehrer.com/api/og/render?title=${title}`);
+
+	const res = await platform?.env.OG_BROWSER.fetch(req);
+	if (!res) {
+		return new Response(null, { status: 500 });
+	}
+	const img = await res.arrayBuffer();
+
+	return new Response(img, {
 		headers: {
 			'content-type': 'image/png',
 		},

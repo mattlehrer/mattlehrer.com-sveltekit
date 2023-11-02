@@ -7,7 +7,7 @@ declare global {
 		// interface PageData {}
 		interface Platform {
 			env: {
-				MYBROWSER: Fetcher;
+				OG_BROWSER: Fetcher;
 			};
 		}
 	}
