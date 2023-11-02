@@ -11,11 +11,18 @@ export const GET: RequestHandler = async ({ platform, url }) => {
 	if (!res) {
 		return new Response(null, { status: 500 });
 	}
-	const img = await res.arrayBuffer();
-
-	return new Response(img, {
-		headers: {
-			'content-type': 'image/png',
-		},
-	}) as ReturnType<RequestHandler>;
+	try {
+		const img = await res.arrayBuffer();
+		if (img) {
+			return new Response(img, {
+				headers: {
+					'content-type': 'image/png',
+					'cache-control': 'public, max-age=604800, immutable',
+				},
+			}) as ReturnType<RequestHandler>;
+		}
+	} catch (error) {
+		console.error('Error generating image', error);
+	}
+	return new Response(null, { status: 500 });
 };

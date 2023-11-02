@@ -7,7 +7,8 @@
 
 	onMount(() => {
 		document.body.style['overflow'] = 'hidden';
-		document.body.style['overflowY'] = 'hidden';
+		document.body.style['scrollbarGutter'] = 'auto';
+		document.body.style['minHeight'] = 'unset';
 	});
 </script>
 
