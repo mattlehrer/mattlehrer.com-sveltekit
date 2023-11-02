@@ -1,8 +1,14 @@
 <script lang="ts">
 	import Card from '$lib/components/og/OGCard.svelte';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	onMount(() => {
+		document.body.style['overflow'] = 'hidden';
+		document.body.style['overflowY'] = 'hidden';
+	});
 </script>
 
 <div class="card">
