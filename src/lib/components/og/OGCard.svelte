@@ -35,6 +35,7 @@
 
 		max-width: 85%;
 		text-wrap: balance;
+		text-wrap: pretty;
 		line-height: 1.1;
 	}
 
