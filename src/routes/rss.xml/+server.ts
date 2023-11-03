@@ -15,9 +15,9 @@ async function getRssXml(
 	fetch: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>,
 ): Promise<string> {
 	const response = await fetch('/api/posts');
-	const posts: Post[] = await response.json();
-	const rssUrl = `${config.url}/rss.xml`;
+	const rssUrl = `${config.url}rss.xml`;
 	const root = create({ version: '1.0', encoding: 'utf-8' })
+		.ins('xml-stylesheet', 'type="text/xsl" href="/rss-style.xsl"')
 		.ele('feed', {
 			xmlns: 'http://www.w3.org/2005/Atom',
 		})
@@ -46,6 +46,7 @@ async function getRssXml(
 		.txt(config.description)
 		.up();
 
+	const posts: Post[] = await response.json();
 	for await (const post of posts) {
 		const postUrl = `${config.url}blog/${post.slug}`;
 
