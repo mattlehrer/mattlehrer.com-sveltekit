@@ -25,7 +25,7 @@
 </script>
 
 <article
-	class="flex min-w-[16ch] max-w-min flex-col rounded-sm bg-primary-200 px-2 py-4 shadow-inner sm:min-w-[24ch] sm:py-6"
+	class="flex min-w-[15ch] max-w-min flex-col rounded-sm bg-primary-200 px-1 py-4 shadow-inner sm:min-w-[24ch] sm:py-6"
 >
 	{#if rating.cover}
 		<a href={rating.id}>
