@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<header>
+<header class="full-bleed px-8 sm:px-16">
 	<nav class="flex items-center justify-between py-8">
 		{#if $page.route.id !== '/'}
 			<a

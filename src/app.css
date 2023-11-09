@@ -111,7 +111,7 @@
 		text-wrap: pretty;
 	}
 
-	.full-bleed h2 span {
+	.full-bleed h2.relative.flex.justify-center span {
 		@apply main-bg-color px-3 text-3xl font-semibold leading-6 text-primary-850 sm:px-6 sm:text-5xl lg:px-8;
 	}
 
