@@ -11,7 +11,7 @@
 			>
 				<span class="fancy-serif-bold text-5xl font-black">ML</span>
 			</a>
-			<div class="flex gap-6">
+			<div class="flex gap-2 text-sm sm:gap-6">
 				<a
 					class="px-2 hover:scale-110 hover:text-primary-800 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 					href="/about">About</a
@@ -19,6 +19,10 @@
 				<a
 					class="px-2 hover:scale-110 hover:text-primary-800 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 					href="/blog">Blog</a
+				>
+				<a
+					class="px-2 hover:scale-110 hover:text-primary-800 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+					href="/reading/books">Book reviews</a
 				>
 			</div>
 		{/if}

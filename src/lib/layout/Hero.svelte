@@ -12,6 +12,7 @@
 				<p class="mt-4 flex gap-6 text-xl font-thin sm:text-2xl">
 					<a href="/about">About</a>
 					<a href="/blog">Blog</a>
+					<a href="/reading/books">Book reviews</a>
 					<a href="/#projects">Portfolio</a>
 				</p>
 			</div>
