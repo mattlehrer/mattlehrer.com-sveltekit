@@ -6,6 +6,7 @@ import type { BookRating, BookwyrmAuthor, BookwyrmBook, BookwyrmOutbox } from '$
 const fetchOptions = {
 	cf: {
 		// cacheTtl: 60 * 60 * 24 * 30, // 30 days
+		cacheTtl: 60 * 60 * 24, // 1 day
 		cacheEverything: true,
 	},
 	headers: {
