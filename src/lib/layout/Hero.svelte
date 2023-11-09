@@ -9,7 +9,7 @@
 					An inquisitive American web developer, dad, and former finance strategist in Malmö,
 					Sweden.
 				</p>
-				<p class="mt-4 flex gap-6 text-xl font-thin sm:text-2xl">
+				<p class="mt-4 flex gap-4 text-lg font-thin sm:text-2xl">
 					<a href="/about">About</a>
 					<a href="/blog">Blog</a>
 					<a href="/reading/books">Book reviews</a>
