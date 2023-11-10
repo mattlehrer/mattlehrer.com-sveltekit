@@ -45,12 +45,12 @@
 			by {listFormatter.format(rating.authors)}
 		</h2>
 		{#if rating.reviewTitle}
-			<details class="relative cursor-pointer pb-5">
-				<summary class="mb-2 ml-2 list-outside font-medium">
+			<details class="cursor-pointer pb-5">
+				<summary class="mb-2 ml-4 list-outside font-medium sm:ml-2">
 					{rating.reviewTitle}
 				</summary>
 				<div
-					class="prose prose-primary absolute mt-2 w-[26ch] rounded-sm bg-primary-300 p-4 font-light shadow-lg"
+					class="prose prose-primary absolute mt-2 w-[16ch] rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:w-[26ch] sm:p-3 sm:text-base"
 				>
 					{@html rating.reviewContent}
 				</div>
