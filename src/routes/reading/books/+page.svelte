@@ -37,8 +37,8 @@
 		consumption. You can check out <a href="https://bookwyrm.social/user/mattlehrer">my profile</a>,
 		and lists of my
 		<a href="https://bookwyrm.social/list/1047/s/favorite-fiction">favorite fiction</a>
-		and <a href="https://bookwyrm.social/list/1039/s/favorite-non-fiction">non-fiction</a> there. Below
-		are the books that I've rated or written a review of.
+		and <a href="https://bookwyrm.social/list/1039/s/favorite-non-fiction">non-fiction</a> there. The
+		books that I've rated or written a review about will load from Bookwyrm below.
 	</p>
 	<div class="mx-auto flex flex-wrap gap-2 p-3 sm:gap-4 sm:p-16">
 		{#each ratings as rating}
