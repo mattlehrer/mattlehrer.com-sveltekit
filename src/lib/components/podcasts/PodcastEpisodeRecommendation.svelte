@@ -2,6 +2,7 @@
 	import { audioPlaying } from '$lib/stores';
 	import type { EpisodeRecommendation } from '$lib/types';
 	import { decodeHtml } from '$lib/utils';
+	import { ExternalLink } from 'lucide-svelte';
 
 	export let episode: EpisodeRecommendation;
 	export let isPaused = true;
@@ -32,7 +33,16 @@
 			class="h-20 w-20 sm:h-28 sm:w-28"
 		/>
 		<div class="flex w-full flex-col">
-			<h3 class="text-lg font-bold leading-[1.33em]">{decodeHtml(episode.title)}</h3>
+			<div class="flex items-start justify-between">
+				<h3 class="text-lg font-bold leading-[1.33em]">{decodeHtml(episode.title)}</h3>
+				<a
+					href={episode.url}
+					class="-m-1 rounded-lg p-1 opacity-80 hover:scale-125 hover:bg-primary-800 hover:text-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+					target="_blank"
+					><ExternalLink class="h-5 w-5" />
+				</a>
+			</div>
+
 			<h4 class="mt-1.5 text-lg font-light leading-[1.33em]">{decodeHtml(episode.feedTitle)}</h4>
 			<p class="mt-4 text-sm font-light">
 				Published {new Intl.DateTimeFormat(undefined, {

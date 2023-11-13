@@ -7,6 +7,7 @@
 
 <a
 	class="group rounded-sm bg-primary-200 p-4 shadow-inner hover:bg-primary-400"
+	target="_blank"
 	href={podcast.htmlUrl}
 >
 	<article class="flex w-full flex-col text-lg sm:w-[24rem] sm:p-4">
