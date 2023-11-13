@@ -8,6 +8,7 @@ declare global {
 		interface Platform {
 			env: {
 				OG_BROWSER: Fetcher;
+				BOOKWYRM_KV: KVNamespace;
 			};
 		}
 	}

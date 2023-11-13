@@ -5,8 +5,8 @@ import type { BookRating, BookwyrmAuthor, BookwyrmBook, BookwyrmOutbox } from '$
 
 const fetchOptions = {
 	cf: {
-		// cacheTtl: 60 * 60 * 24 * 30, // 30 days
-		cacheTtl: 60 * 60 * 24, // 1 day
+		cacheTtl: 60 * 60 * 24 * 30, // 30 days
+		// cacheTtl: 60 * 60 * 24, // 1 day
 		cacheEverything: true,
 	},
 	headers: {
@@ -16,7 +16,11 @@ const fetchOptions = {
 
 export const GET: RequestHandler = async ({ params }) => {
 	const url = `https://bookwyrm.social/user/mattlehrer/outbox?page=${params.page}`;
-	const response = await fetch(url);
+	const response = await fetch(url, {
+		headers: {
+			Accept: 'application/json',
+		},
+	});
 	const { orderedItems: items, next } = (await response.json()) as BookwyrmOutbox;
 
 	const ratings: BookRating[] = [];
