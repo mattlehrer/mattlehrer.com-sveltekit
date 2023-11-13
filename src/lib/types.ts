@@ -1,3 +1,5 @@
+import type { getRecentRecommendations, getRecentSubscriptions } from './overcast/parse';
+
 export type Categories = string;
 
 export type Post = {
@@ -194,3 +196,35 @@ export type BookwyrmOutbox = {
 	next: string;
 	'@context': string;
 };
+
+export type PodcastFeed = {
+	episodes: OvercastEpisode[] | OvercastEpisode;
+	type: 'rss';
+	overcastId: number;
+	text: string;
+	title: string;
+	xmlUrl: string;
+	htmlUrl: string;
+	overcastAddedDate: string;
+	subscribed: number;
+	notifications: number;
+};
+
+export type OvercastEpisode = {
+	type: 'podcast-episode';
+	pubDate: string;
+	title: string;
+	url: string;
+	overcastUrl: string;
+	enclosureUrl: string;
+	userUpdatedDate: string;
+	userRecommendedDate?: string;
+	userDeleted?: number;
+	played?: number;
+};
+
+export type EpisodeRecommendations = ReturnType<typeof getRecentRecommendations>;
+export type EpisodeRecommendation = EpisodeRecommendations[number];
+
+export type FeedSubscriptions = ReturnType<typeof getRecentSubscriptions>;
+export type FeedSubscription = FeedSubscriptions[number];
