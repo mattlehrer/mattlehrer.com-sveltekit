@@ -26,10 +26,10 @@
 	/>
 </svelte:head>
 
-<article class="w-full overflow-hidden">
-	<h1 class="mb-4 mt-8 px-6 text-4xl sm:px-16 sm:text-5xl">Podcast Recommendations</h1>
+<article class="w-full overflow-hidden px-6 sm:px-16">
+	<h1 class="mb-4 mt-8 text-4xl sm:text-5xl">Podcast Recommendations</h1>
 
-	<div class="px-6 sm:px-16">
+	<section>
 		<h2 id="episode-recs" class="mb-6 mt-16 text-2xl sm:text-4xl">
 			Recent podcast episode recommendations
 		</h2>
@@ -43,9 +43,9 @@
 				>See all episode recommendations <ArrowRight class="inline-block text-inherit" /></a
 			>
 		</p>
-	</div>
+	</section>
 
-	<div class="px-6 sm:px-16">
+	<section>
 		<h2 id="recent-subs" class="mb-6 mt-16 text-2xl sm:text-4xl">Recent podcast subscriptions</h2>
 		<div class="mx-auto flex flex-wrap gap-6">
 			{#each data.recentSubs as podcast}
@@ -57,7 +57,7 @@
 				>See all subscriptions <ArrowRight class="inline-block text-inherit" /></a
 			>
 		</p>
-	</div>
+	</section>
 </article>
 
 <style lang="postcss">
