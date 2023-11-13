@@ -6,7 +6,7 @@ export const prerender = false;
 
 export const GET = (async ({ platform, params }) => {
 	if (!params.key || params.key !== CHECK_KEY) {
-		return new Response(undefined, { status: 401 });
+		return new Response(undefined, { status: 400 });
 	}
 	/**
 	 *
