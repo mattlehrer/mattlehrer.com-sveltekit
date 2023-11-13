@@ -20,9 +20,12 @@ export async function load({ fetch }) {
 	}
 
 	let ratings: BookRating[] = [];
+	console.log('fetching bookwyrm book ratings');
 	for await (const items of getBookRatings()) {
 		ratings = ratings.concat(items);
 	}
+
+	console.log(`fetched ${ratings.length} ratings`);
 
 	return { ratings };
 }

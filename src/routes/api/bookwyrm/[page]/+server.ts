@@ -2,6 +2,7 @@ import clone from 'just-clone';
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import type { BookRating, BookwyrmAuthor, BookwyrmBook, BookwyrmOutbox } from '$lib/types';
+import { dev } from '$app/environment';
 
 const fetchOptions = {
 	cf: {
@@ -70,7 +71,7 @@ export const GET: RequestHandler = async ({ params }) => {
 					cover: edition?.cover?.url ?? book.cover?.url,
 				};
 
-				console.log(item.id, JSON.stringify(rating, null, 2));
+				if (dev) console.log(item.id, JSON.stringify(rating, null, 2));
 
 				ratings.push(rating);
 			} catch (error) {
