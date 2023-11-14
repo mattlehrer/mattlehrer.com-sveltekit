@@ -2,7 +2,7 @@ import { json, type RequestHandler } from '@sveltejs/kit';
 
 export const prerender = true;
 
-export const GET: RequestHandler = async () => {
+export const GET = (async () => {
 	return json(
 		{
 			subject: 'acct:mattlehrer@definitely.social',
@@ -33,4 +33,4 @@ export const GET: RequestHandler = async () => {
 			},
 		},
 	);
-};
+}) satisfies RequestHandler;

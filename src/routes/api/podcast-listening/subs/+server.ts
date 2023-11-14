@@ -6,10 +6,10 @@ const SUBS = 500;
 
 export const prerender = true;
 
-export const GET: RequestHandler = async () => {
+export const GET = (async () => {
 	const data = parseOpml(overcastData);
 
 	const recentSubs = getRecentSubscriptions(data.opml.body.feeds.outline, SUBS);
 
 	return json({ recentSubs });
-};
+}) satisfies RequestHandler;

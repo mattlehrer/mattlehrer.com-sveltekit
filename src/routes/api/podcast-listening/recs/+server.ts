@@ -6,10 +6,10 @@ const RECS = 500;
 
 export const prerender = true;
 
-export const GET: RequestHandler = async () => {
+export const GET = (async () => {
 	const data = parseOpml(overcastData);
 
 	const recentRecs = getRecentRecommendations(data.opml.body.feeds.outline, RECS);
 
 	return json({ recentRecs });
-};
+}) satisfies RequestHandler;

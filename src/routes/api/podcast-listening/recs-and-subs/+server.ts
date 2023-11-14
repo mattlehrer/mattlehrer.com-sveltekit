@@ -7,11 +7,11 @@ const RECS = 4;
 
 export const prerender = true;
 
-export const GET: RequestHandler = async () => {
+export const GET = (async () => {
 	const data = parseOpml(overcastData);
 
 	const recentSubs = getRecentSubscriptions(data.opml.body.feeds.outline, SUBS);
 	const recentRecs = getRecentRecommendations(data.opml.body.feeds.outline, RECS);
 
 	return json({ recentSubs, recentRecs });
-};
+}) satisfies RequestHandler;

@@ -17,7 +17,7 @@ const fetchOptions = {
 	},
 };
 
-export const GET: RequestHandler = async ({ fetch }) => {
+export const GET = (async ({ fetch }) => {
 	let ratings: BookRating[] = [];
 	for await (const items of getBookRatings(fetch)) {
 		ratings = ratings.concat(items);
@@ -25,7 +25,7 @@ export const GET: RequestHandler = async ({ fetch }) => {
 	}
 
 	return json({ ratings });
-};
+}) satisfies RequestHandler;
 
 async function* getBookRatings(fetch: Fetch) {
 	let next: string | null = 'https://bookwyrm.social/user/mattlehrer/outbox?page=1';

@@ -2,7 +2,7 @@ import type { RequestHandler } from './$types';
 
 export const prerender = false;
 
-export const GET: RequestHandler = async ({ platform, url }) => {
+export const GET = (async ({ platform, url }) => {
 	const title = url.searchParams.get('title') ?? undefined;
 
 	const req = new Request(`${url.origin}/api/og/render?title=${title}`);
@@ -25,4 +25,4 @@ export const GET: RequestHandler = async ({ platform, url }) => {
 		console.error('Error generating image', error);
 	}
 	return new Response(null, { status: 500 });
-};
+}) satisfies RequestHandler;
