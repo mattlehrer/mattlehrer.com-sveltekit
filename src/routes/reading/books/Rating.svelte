@@ -37,20 +37,20 @@
 </svelte:head>
 
 <article
-	class="flex min-w-[15ch] max-w-min flex-col rounded-sm bg-primary-200 px-1 py-4 shadow-inner sm:min-w-[24ch] sm:py-6"
+	class="flex min-w-[98%] max-w-min flex-col rounded-sm bg-primary-200 px-1 py-4 shadow-inner sm:min-w-[24ch] sm:py-6"
 >
 	{#if rating.cover}
 		<a href={rating.id}>
 			<img
 				loading="lazy"
-				class="mx-auto mb-6 h-36 shadow-xl transition-all hover:-translate-y-8 hover:scale-125 sm:h-60"
+				class="mx-auto mb-6 h-40 shadow-xl transition-all hover:-translate-y-8 hover:scale-125 sm:h-60"
 				src={rating.cover}
 				alt="{rating.title} cover"
 			/>
 		</a>
 	{:else}
 		<div
-			class="mx-auto mb-6 grid h-36 w-24 place-content-center bg-tertiary-800 p-4 text-center text-tertiary-400 shadow-xl sm:h-60 sm:w-40"
+			class="mx-auto mb-6 grid h-40 w-24 place-content-center bg-tertiary-800 p-4 text-center text-tertiary-400 shadow-xl sm:h-60 sm:w-40"
 		>
 			Cover unavailable
 		</div>
@@ -68,7 +68,7 @@
 					{rating.reviewTitle}
 				</summary>
 				<div
-					class="prose prose-primary absolute mt-2 w-[16ch] rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:w-[26ch] sm:p-3 sm:text-base"
+					class="prose prose-primary absolute z-20 -ml-1 mt-2 w-[16ch] rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:ml-0 sm:w-[26ch] sm:p-3 sm:text-base"
 				>
 					{@html rating.reviewContent}
 				</div>
@@ -86,6 +86,7 @@
 			{#each new Array(5 - Math.floor(rating.rating)) as _}
 				<Star class="h-5 w-5 text-primary-600 sm:h-6 sm:w-6" />
 			{/each}
+			<p class="sr-only">{rating.rating} stars</p>
 		</a>
 	</div>
 </article>
