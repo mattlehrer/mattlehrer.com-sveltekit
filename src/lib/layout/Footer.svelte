@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { Rss } from 'lucide-svelte';
 </script>
 
@@ -6,7 +7,9 @@
 	class="flex flex-col flex-wrap items-center justify-around gap-6 px-8 pb-8 pt-20 opacity-80 sm:flex-row md:max-w-7xl md:gap-8"
 >
 	<div class="flex items-center gap-8">
-		<a href="https://github.com/mattlehrer/">
+		<a
+			href={`https://github.com/mattlehrer/mattlehrer.com-sveltekit/tree/main/src/routes${$page.route.id}/+page.svelte`}
+		>
 			<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 				<path
 					fill-rule="evenodd"
