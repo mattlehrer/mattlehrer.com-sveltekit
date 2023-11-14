@@ -16,6 +16,8 @@
 			<div class="flex items-center justify-between">
 				<input
 					id="menu-toggle"
+					aria-label={isChecked ? 'Close menu' : 'Open menu'}
+					title={isChecked ? 'Close menu' : 'Open menu'}
 					class="absolute cursor-pointer opacity-0"
 					type="checkbox"
 					bind:checked={isChecked}
