@@ -21,6 +21,7 @@ export const GET: RequestHandler = async ({ fetch }) => {
 	let ratings: BookRating[] = [];
 	for await (const items of getBookRatings(fetch)) {
 		ratings = ratings.concat(items);
+		if (dev && ratings.length > 10) break;
 	}
 
 	return json({ ratings });
