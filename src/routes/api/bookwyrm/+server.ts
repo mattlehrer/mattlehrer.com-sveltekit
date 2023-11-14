@@ -4,6 +4,8 @@ import type { RequestHandler } from './$types';
 import type { BookRating, BookwyrmAuthor, BookwyrmBook, BookwyrmOutbox } from '$lib/types';
 import { dev } from '$app/environment';
 
+type Fetch = typeof fetch;
+
 const fetchOptions = {
 	cf: {
 		cacheTtl: 60 * 60 * 24 * 30, // 30 days
@@ -15,8 +17,26 @@ const fetchOptions = {
 	},
 };
 
-export const GET: RequestHandler = async ({ params }) => {
-	const url = `https://bookwyrm.social/user/mattlehrer/outbox?page=${params.page}`;
+export const GET: RequestHandler = async ({ fetch }) => {
+	let ratings: BookRating[] = [];
+	for await (const items of getBookRatings(fetch)) {
+		ratings = ratings.concat(items);
+	}
+
+	return json({ ratings });
+};
+
+async function* getBookRatings(fetch: Fetch) {
+	let next: string | null = 'https://bookwyrm.social/user/mattlehrer/outbox?page=1';
+	let ratingsFromPage: BookRating[] = [];
+
+	while (next) {
+		({ ratingsFromPage, next } = await getBookwyrmPage(next, fetch));
+		yield ratingsFromPage as BookRating[];
+	}
+}
+
+async function getBookwyrmPage(url: string, fetch: Fetch) {
 	const response = await fetch(url, {
 		headers: {
 			Accept: 'application/json',
@@ -24,7 +44,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	});
 	const { orderedItems: items, next } = (await response.json()) as BookwyrmOutbox;
 
-	const ratings: BookRating[] = [];
+	const ratingsFromPage: BookRating[] = [];
 
 	for (const item of items) {
 		if (item.rating) {
@@ -73,11 +93,11 @@ export const GET: RequestHandler = async ({ params }) => {
 
 				if (dev) console.log(item.id, JSON.stringify(rating, null, 2));
 
-				ratings.push(rating);
+				ratingsFromPage.push(rating);
 			} catch (error) {
 				console.error('Error fetching rating info: ', item.id, error);
 			}
 		}
 	}
-	return json({ ratings, next });
-};
+	return { ratingsFromPage, next };
+}
