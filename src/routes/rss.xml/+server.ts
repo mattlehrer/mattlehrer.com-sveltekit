@@ -1,17 +1,18 @@
 import * as config from '$lib/config';
 import { create } from 'xmlbuilder2';
 import type { Post } from '$lib/types';
+import type { RequestHandler } from '@sveltejs/kit';
 
 export const prerender = true;
 
-export async function GET({ fetch }) {
+export const GET = (async ({ fetch }) => {
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
 	};
 
 	return new Response(await getRssXml(fetch), { headers });
-}
+}) satisfies RequestHandler;
 
 async function getRssXml(
 	fetch: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>,
