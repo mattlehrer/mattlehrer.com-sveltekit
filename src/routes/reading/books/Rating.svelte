@@ -48,6 +48,12 @@
 				alt="{rating.title} cover"
 			/>
 		</a>
+	{:else}
+		<div
+			class="mx-auto mb-6 grid h-36 w-24 place-content-center bg-tertiary-800 p-4 text-center text-tertiary-400 shadow-xl sm:h-60 sm:w-40"
+		>
+			Cover unavailable
+		</div>
 	{/if}
 	<div class="px-1 sm:px-3">
 		<h2 class="mb-5 text-center sm:text-lg">
