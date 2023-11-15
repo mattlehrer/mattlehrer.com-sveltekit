@@ -24,43 +24,52 @@ export const GET = (async ({ platform, params }) => {
 			Accept: 'application/json',
 		},
 	});
-	let { orderedItems: items, next } = (await response.json()) as BookwyrmOutbox;
-
-	let mostRecentRating = undefined;
-	let i = 0;
-
-	while (!mostRecentRating) {
-		if (i < items.length) {
-			if (items[i].rating) {
-				mostRecentRating = items[i].published;
-			}
-			i++;
-		} else {
-			const response = await fetch(next, {
-				headers: {
-					Accept: 'application/json',
-				},
-			});
-			({ orderedItems: items, next } = (await response.json()) as BookwyrmOutbox);
-			i = 0;
-		}
+	if (!response.ok) {
+		// failure but not this server's fault
+		return new Response(undefined, { status: 200 });
 	}
+	try {
+		let { orderedItems: items, next } = (await response.json()) as BookwyrmOutbox;
 
-	const mostRecentKnownRating = await platform?.env.BOOKWYRM_KV.get('mostRecentRating');
+		let mostRecentRating = undefined;
+		let i = 0;
 
-	console.log({ mostRecentRating, mostRecentKnownRating });
+		while (!mostRecentRating) {
+			if (i < items.length) {
+				if (items[i].rating) {
+					mostRecentRating = items[i].published;
+				}
+				i++;
+			} else {
+				const response = await fetch(next, {
+					headers: {
+						Accept: 'application/json',
+					},
+				});
+				({ orderedItems: items, next } = (await response.json()) as BookwyrmOutbox);
+				i = 0;
+			}
+		}
 
-	if (!mostRecentKnownRating || mostRecentKnownRating !== mostRecentRating) {
-		await platform?.env.BOOKWYRM_KV.put('mostRecentRating', mostRecentRating);
+		const mostRecentKnownRating = await platform?.env.BOOKWYRM_KV.get('mostRecentRating');
 
-		const res = await fetch(CF_BOOKWYRM_DEPLOY_HOOK, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({}),
-		});
-		console.log(res);
+		console.log({ mostRecentRating, mostRecentKnownRating });
+
+		if (!mostRecentKnownRating || mostRecentKnownRating !== mostRecentRating) {
+			await platform?.env.BOOKWYRM_KV.put('mostRecentRating', mostRecentRating);
+
+			const res = await fetch(CF_BOOKWYRM_DEPLOY_HOOK, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({}),
+			});
+			console.log(res);
+		}
+	} catch (error) {
+		console.error(error);
+		return new Response(undefined, { status: 500 });
 	}
 
 	return new Response(undefined, { status: 200 });
