@@ -13,7 +13,7 @@
 		and lists of my
 		<a href="https://bookwyrm.social/list/1047/s/favorite-fiction">favorite fiction</a>
 		and <a href="https://bookwyrm.social/list/1039/s/favorite-non-fiction">non-fiction</a> there. The
-		books that I've rated or written a review about will load from Bookwyrm below.
+		books that I've rated or written a review on Bookwyrm are below.
 	</p>
 	<div
 		class="mx-auto grid grid-cols-2 justify-items-center gap-2 p-6 sm:flex sm:flex-wrap sm:gap-4 sm:p-16"
