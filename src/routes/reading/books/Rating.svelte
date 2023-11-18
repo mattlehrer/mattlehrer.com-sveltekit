@@ -81,9 +81,10 @@
 				<Star class="h-5 w-5 fill-primary-600 text-primary-600 sm:h-6 sm:w-6" />
 			{/each}
 			{#if Math.floor(rating.rating) !== rating.rating}
+				<Star class="absolute h-5 w-5 translate-x-full text-primary-600 sm:h-6 sm:w-6" />
 				<StarHalf class="h-5 w-5 fill-primary-600 text-primary-600 sm:h-6 sm:w-6" />
 			{/if}
-			{#each new Array(5 - Math.floor(rating.rating)) as _}
+			{#each new Array(5 - Math.ceil(rating.rating)) as _}
 				<Star class="h-5 w-5 text-primary-600 sm:h-6 sm:w-6" />
 			{/each}
 			<p class="sr-only">{rating.rating} stars</p>
