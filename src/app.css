@@ -105,6 +105,8 @@
 	caption,
 	figcaption {
 		text-wrap: balance;
+		scroll-margin-top: 2em;
+		scroll-snap-margin-top: 2em;
 	}
 
 	p {
@@ -170,7 +172,7 @@
 		@apply flex items-start justify-end lg:order-first;
 	}
 
-	.projects h3 {
+	.projects h2 {
 		@apply text-2xl font-bold text-primary-900 sm:text-3xl lg:text-4xl;
 	}
 

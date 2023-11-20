@@ -3,3 +3,8 @@ declare module './images/*' {
 	const meta;
 	export default meta;
 }
+
+declare module '$lib/components/portfolio/cards/images/*' {
+	const meta;
+	export default meta;
+}

@@ -6,7 +6,7 @@
 	import { ArrowRight } from 'lucide-svelte';
 
 	export let posts: Post[] = [];
-	export let MAX_POSTS = 3;
+	export let MAX_POSTS = 2;
 </script>
 
 <section class="wrapper pb-8 sm:pb-16" aria-labelledby="recent-posts-heading">

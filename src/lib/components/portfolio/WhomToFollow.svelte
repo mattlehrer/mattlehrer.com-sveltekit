@@ -5,16 +5,16 @@
 	import Img from '@zerodevx/svelte-img';
 </script>
 
-<div class="full-bleed">
+<article class="full-bleed" aria-labelledby="whomtofollow">
 	<div class="overflow-hidden py-24 sm:py-40">
-		<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mx-auto max-w-7xl px-8 lg:px-16">
 			<div
 				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
 			>
 				<div class="project-column-spacing self-center">
 					<div class="lg:max-w-lg">
 						<div class="flex items-center gap-6">
-							<h3>Whom To Follow</h3>
+							<h2 id="whomtofollow">Whom To Follow</h2>
 							<a class="w-8" href="https://whomtofollow.com">
 								<Globe class="h-6 w-6 opacity-80" />
 								<span class="sr-only">Site link</span>
@@ -93,4 +93,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>

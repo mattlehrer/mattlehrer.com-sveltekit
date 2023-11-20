@@ -4,9 +4,9 @@
 	let isChecked = false;
 </script>
 
-<header class="full-bleed px-8 text-primary-800 sm:px-16">
-	<nav class="flex items-center justify-between py-8">
-		{#if $page.route.id !== '/'}
+{#if $page.route.id !== '/'}
+	<header class="full-bleed px-8 text-primary-800 lg:px-16">
+		<nav class="flex items-center justify-between py-8">
 			<a
 				class="pt-1 text-inherit no-underline focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-800"
 				href="/"
@@ -23,13 +23,13 @@
 					bind:checked={isChecked}
 				/>
 				<label
-					class="menu-button-container z-10 flex h-full w-12 cursor-pointer flex-col items-center justify-center md:hidden"
+					class="menu-button-container z-10 flex h-full w-12 cursor-pointer flex-col items-center justify-center lg:hidden"
 					for="menu-toggle"
 				>
 					<div class="menu-button"></div>
 				</label>
 				<ul
-					class="menu absolute left-0 top-0 z-20 mt-24 flex w-full list-none flex-col items-center justify-center text-sm md:relative md:mt-0 md:w-auto md:flex-row md:gap-4 md:text-base"
+					class="menu absolute left-0 top-0 z-20 mt-24 flex w-full list-none flex-col items-center justify-center text-sm lg:relative lg:mt-0 lg:w-auto lg:flex-row lg:gap-4 lg:text-base"
 				>
 					<li>
 						<a on:click={() => (isChecked = false)} href="/about">About</a>
@@ -45,19 +45,22 @@
 							>Podcast recommendations</a
 						>
 					</li>
+					<li>
+						<a on:click={() => (isChecked = false)} href="/projects">Projects</a>
+					</li>
 				</ul>
 			</div>
-		{/if}
-	</nav>
-</header>
+		</nav>
+	</header>
+{/if}
 
 <style lang="postcss">
 	li {
-		@apply m-0 h-0 md:h-auto;
+		@apply m-0 h-0 lg:h-auto;
 	}
 
 	li > a {
-		@apply px-2 text-lg hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 md:text-base lg:text-lg;
+		@apply px-2 text-lg hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 lg:text-base lg:text-lg;
 	}
 
 	.menu-button,
@@ -96,7 +99,7 @@
 		transform: rotate(-405deg);
 	}
 
-	@media (max-width: theme(screens.md)) {
+	@media (max-width: theme(screens.lg)) {
 		#menu-toggle ~ .menu li {
 			padding: 0;
 			border: 0;

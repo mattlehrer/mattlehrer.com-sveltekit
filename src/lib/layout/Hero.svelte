@@ -14,7 +14,7 @@
 					<a href="/blog">Blog</a>
 					<a href="/reading/books">Book reviews</a>
 					<a href="/podcast-listening">Podcast recommendations</a>
-					<a href="/#projects">Portfolio</a>
+					<a href="/projects">Projects</a>
 				</p>
 			</div>
 		</div>

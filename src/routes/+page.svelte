@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { description, title, url } from '$lib/config.js';
 	import Hero from '$lib/layout/Hero.svelte';
-	import Portfolio from '$lib/layout/Portfolio.svelte';
+	import Projects from '$lib/layout/ProjectCards.svelte';
 	import Posts from '$lib/layout/Posts.svelte';
 
 	export let data;
 
-	const MAX_POSTS = 3;
+	const MAX_POSTS = 2;
 </script>
 
 <svelte:head>
@@ -17,6 +17,6 @@
 
 <Hero />
 
-<Portfolio />
+<Projects />
 
 <Posts posts={data.posts} {MAX_POSTS} />
