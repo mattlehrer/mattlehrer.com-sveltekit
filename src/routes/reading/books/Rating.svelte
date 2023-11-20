@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { url } from '$lib/config';
 	import type { BookRating } from '$lib/types';
 	import { Star, StarHalf } from 'lucide-svelte';
 	export let rating: BookRating;
@@ -24,17 +23,6 @@
 		type: 'conjunction',
 	});
 </script>
-
-<svelte:head>
-	<title>Matt Lehrer's recent book and audiobook reviews</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Matt Lehrer's recent book and audiobook reviews" />
-	<meta
-		content="{url}api/og?title=Matt Lehrer's recent book and audiobook reviews"
-		property="og:image"
-	/>
-	<meta content="Matt Lehrer's recent book and audiobook reviews" property="og:image:alt" />
-</svelte:head>
 
 <article
 	class="flex min-w-[98%] max-w-min flex-col rounded-sm bg-primary-200 px-1 py-4 shadow-inner sm:min-w-[24ch] sm:py-6"

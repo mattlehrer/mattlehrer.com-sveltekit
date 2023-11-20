@@ -1,9 +1,21 @@
 <script lang="ts">
 	import Rating from './Rating.svelte';
 	import type { PageData } from './$types';
+	import { url } from '$lib/config';
 
 	export let data: PageData;
 </script>
+
+<svelte:head>
+	<title>Matt Lehrer's recent book and audiobook reviews</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Matt Lehrer's recent book and audiobook reviews" />
+	<meta
+		content="{url}api/og?title=Matt Lehrer's recent book and audiobook reviews"
+		property="og:image"
+	/>
+	<meta content="Matt Lehrer's recent book and audiobook reviews" property="og:image:alt" />
+</svelte:head>
 
 <article class="w-full">
 	<h1 class="mb-4 mt-8 px-6 text-4xl sm:px-16 sm:text-5xl">Recent Book Ratings and Reviews</h1>
