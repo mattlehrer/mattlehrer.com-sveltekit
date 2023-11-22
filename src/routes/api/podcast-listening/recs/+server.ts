@@ -6,10 +6,11 @@ const RECS = 500;
 
 export const prerender = true;
 
-export const GET = (async () => {
+export const GET = (async ({ url }) => {
+	const limit = Number(url.searchParams.get('limit')) || RECS;
 	const data = parseOpml(overcastData);
 
-	const recentRecs = getRecentRecommendations(data.opml.body.feeds.outline, RECS);
+	const recentRecs = getRecentRecommendations(data.opml.body.feeds.outline, limit);
 
 	return json({ recentRecs });
 }) satisfies RequestHandler;

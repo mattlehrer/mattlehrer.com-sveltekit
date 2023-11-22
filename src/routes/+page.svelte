@@ -3,6 +3,8 @@
 	import Hero from '$lib/layout/Hero.svelte';
 	import Projects from '$lib/layout/ProjectCards.svelte';
 	import Posts from '$lib/layout/Posts.svelte';
+	import BookRatings from '$lib/layout/BookRatings.svelte';
+	import PodcastRecs from '$lib/layout/PodcastRecs.svelte';
 
 	export let data;
 
@@ -20,3 +22,7 @@
 <Projects />
 
 <Posts posts={data.posts} {MAX_POSTS} />
+
+<BookRatings ratings={data.bookRatings} />
+
+<PodcastRecs recommendations={data.podcastRecommendations} />

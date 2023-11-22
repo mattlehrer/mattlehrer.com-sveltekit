@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Rating from './Rating.svelte';
+	import Rating from '$lib/components/BookRating.svelte';
 	import type { PageData } from './$types';
 	import { url } from '$lib/config';
 

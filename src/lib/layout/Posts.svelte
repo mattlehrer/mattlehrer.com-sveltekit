@@ -13,7 +13,7 @@
 	<div class="full-bleed relative py-8 sm:py-16">
 		<DividerBehindHeading />
 		<h2 id="recent-posts-heading" class="relative flex justify-center">
-			<span>Recent blog posts</span>
+			<span>Latest blog posts</span>
 		</h2>
 	</div>
 	<ul class="mt-8 grid divide-y divide-tertiary-600">

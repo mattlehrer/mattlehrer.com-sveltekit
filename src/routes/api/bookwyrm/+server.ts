@@ -17,12 +17,15 @@ const fetchOptions = {
 	},
 };
 
-export const GET = (async ({ fetch }) => {
+export const GET = (async ({ fetch, url }) => {
+	const limit: number = Number(url.searchParams.get('limit'));
 	let ratings: BookRating[] = [];
 	for await (const items of getBookRatings(fetch)) {
 		ratings = ratings.concat(items);
-		if (dev && ratings.length) break;
+		if ((dev && ratings.length) || (limit && ratings.length >= limit)) break;
 	}
+
+	if (limit) ratings = ratings.slice(0, limit);
 
 	return json({ ratings });
 }) satisfies RequestHandler;

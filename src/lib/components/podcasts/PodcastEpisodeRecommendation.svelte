@@ -23,7 +23,7 @@
 </script>
 
 <article
-	class="flex w-full flex-col justify-between gap-2 rounded-sm bg-primary-200 p-4 shadow-inner sm:w-[40ch] sm:p-6"
+	class="flex w-full flex-col justify-between gap-2 rounded-sm bg-primary-200 p-4 shadow-inner sm:max-w-[40ch] sm:p-6"
 >
 	<div class="flex gap-4 sm:gap-6">
 		<img
