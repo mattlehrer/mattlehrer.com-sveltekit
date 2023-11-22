@@ -242,6 +242,21 @@ blockquote.twitter-tweet a:focus {
 		@apply marker:text-tertiary-600;
 	}
 
+	article.prose a {
+		background-image: none;
+		transition:
+			text-decoration-thickness 200ms ease-out,
+			text-underline-offset 200ms ease-out,
+			text-decoration-color 200ms ease-out,
+			color 200ms ease-out;
+	}
+
+	@supports (text-decoration-thickness: 1em) {
+		article.prose a {
+			text-decoration-skip-ink: none;
+		}
+	}
+
 	@media (prefers-reduced-motion) {
 		::view-transition-group(*),
 		::view-transition-old(*),

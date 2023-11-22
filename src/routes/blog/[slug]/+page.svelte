@@ -41,19 +41,3 @@
 		</section>
 	</article>
 </div>
-
-<style lang="postcss">
-	article :global(a) {
-		transition:
-			text-decoration-thickness 200ms ease-out,
-			text-underline-offset 200ms ease-out,
-			text-decoration-color 200ms ease-out,
-			color 200ms ease-out;
-	}
-
-	@supports (text-decoration-thickness: 1em) {
-		article :global(a) {
-			text-decoration-skip-ink: none;
-		}
-	}
-</style>
