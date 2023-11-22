@@ -53,13 +53,21 @@ export const getRecentRecommendations = (feedData: PodcastFeed[], numberToReturn
 	return (
 		feedData
 			.flatMap((feed) => {
-				if (Array.isArray(feed.episodes))
+				if (Array.isArray(feed.episodes)) {
 					return feed.episodes.map((episode) => ({
 						...episode,
 						overcastFeedId: feed.overcastId,
 						feedTitle: feed.title,
 					}));
-				else return [];
+				} else if (feed.episodes) {
+					return {
+						...feed.episodes,
+						overcastFeedId: feed.overcastId,
+						feedTitle: feed.title,
+					};
+				} else {
+					return [];
+				}
 			})
 			// episode can be undefined for podcasts with no episodes
 			.filter((episode) => episode?.userRecommendedDate)
