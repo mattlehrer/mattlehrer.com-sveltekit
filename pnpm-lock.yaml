@@ -46,6 +46,9 @@ devDependencies:
   '@playwright/test':
     specifier: ^1.40.0
     version: 1.40.0
+  '@svelte-put/clickoutside':
+    specifier: ^3.0.1
+    version: 3.0.1
   '@sveltejs/adapter-cloudflare':
     specifier: ^2.3.3
     version: 2.3.3(@sveltejs/kit@1.27.6)
@@ -769,6 +772,10 @@ packages:
       '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@svelte-put/clickoutside@3.0.1:
+    resolution: {integrity: sha512-RhuRmD2RpXF63Mb48DxKkgqIPQ458TnL8M1m6HqtnPh5/g5p+PKIn/L2SPs1s9us2Kn02Y1/txHhOSYbVi6Z2Q==}
     dev: true
 
   /@sveltejs/adapter-cloudflare@2.3.3(@sveltejs/kit@1.27.6):

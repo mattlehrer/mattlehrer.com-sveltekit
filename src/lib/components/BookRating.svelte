@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { BookRating } from '$lib/types';
 	import { Star, StarHalf } from 'lucide-svelte';
+	import { clickoutside } from '@svelte-put/clickoutside';
+
 	export let rating: BookRating;
+
+	let isReviewOpen = false;
 
 	/**
 	 * export type BookRating = {
@@ -51,11 +55,13 @@
 			by {listFormatter.format(rating.authors)}
 		</h2>
 		{#if rating.reviewTitle}
-			<details class="cursor-pointer pb-5">
+			<details class="cursor-pointer pb-5" bind:open={isReviewOpen}>
 				<summary class="mb-2 ml-4 list-outside font-medium sm:ml-2">
 					{rating.reviewTitle}
 				</summary>
 				<div
+					use:clickoutside
+					on:clickoutside={() => (isReviewOpen = false)}
 					class="prose prose-primary absolute z-20 -ml-1 mt-2 max-h-72 min-w-[16ch] max-w-[90%] overflow-y-auto rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:ml-0 sm:w-[24ch] sm:max-w-[24ch] sm:p-3 sm:text-base"
 				>
 					{@html rating.reviewContent}
