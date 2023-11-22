@@ -56,7 +56,7 @@
 					{rating.reviewTitle}
 				</summary>
 				<div
-					class="prose prose-primary absolute z-20 -ml-1 mt-2 w-[16ch] rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:ml-0 sm:w-[24ch] sm:p-3 sm:text-base"
+					class="prose prose-primary absolute z-20 -ml-1 mt-2 max-h-72 min-w-[16ch] max-w-[90%] overflow-y-auto rounded-sm bg-primary-300 p-2 text-sm font-light shadow-lg sm:ml-0 sm:w-[24ch] sm:max-w-[24ch] sm:p-3 sm:text-base"
 				>
 					{@html rating.reviewContent}
 				</div>

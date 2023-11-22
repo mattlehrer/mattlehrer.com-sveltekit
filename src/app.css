@@ -64,6 +64,20 @@
 		@apply rounded-full outline outline-primary-800;
 	}
 
+	details summary + div {
+		scrollbar-gutter: stable both-edges;
+	}
+
+	details summary + div::-webkit-scrollbar {
+		width: 0.5em;
+		@apply bg-primary-500;
+	}
+
+	details summary + div::-webkit-scrollbar-thumb {
+		@apply bg-primary-700;
+		@apply rounded-sm outline outline-1 -outline-offset-1 outline-primary-800;
+	}
+
 	@font-face {
 		font-family: 'Redaction Bold';
 		font-style: normal;
