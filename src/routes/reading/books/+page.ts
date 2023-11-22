@@ -7,7 +7,7 @@ export async function load({ fetch }) {
 	const json = (await response.json()) as { ratings: BookRating[] };
 	const ratings = json.ratings as BookRating[];
 
-	console.log(`fetched ${ratings.length} ratings`);
+	console.log(`fetched ${ratings && Array.isArray(ratings) ? ratings.length : 0} ratings`);
 
 	return { ratings };
 }
