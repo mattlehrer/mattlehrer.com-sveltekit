@@ -18,7 +18,7 @@
 
 <div class="wrapper">
 	<article
-		class="prose prose-lg prose-primary duration-300 ease-out sm:prose-xl prose-a:text-tertiary-700 prose-a:decoration-primary-500 prose-a:decoration-[0.25em] prose-a:underline-offset-[0.125em] hover:prose-a:text-tertiary-50 hover:prose-a:decoration-tertiary-500 hover:prose-a:decoration-[1.125em] hover:prose-a:underline-offset-[-0.875em] focus-visible:prose-a:rounded-sm focus-visible:prose-a:outline focus-visible:prose-a:outline-2 focus-visible:prose-a:outline-offset-2 focus-visible:prose-a:outline-tertiary-500"
+		class="prose prose-lg prose-primary duration-300 ease-out sm:prose-xl prose-a:text-tertiary-700 prose-a:decoration-primary-500 prose-a:decoration-[0.25em] prose-a:underline-offset-[0.125em] hover:prose-a:text-tertiary-50 hover:prose-a:decoration-tertiary-500 hover:prose-a:decoration-[1.125em] hover:prose-a:underline-offset-[-0.875em] focus-visible:prose-a:rounded-sm focus-visible:prose-a:outline focus-visible:prose-a:outline-2 focus-visible:prose-a:outline-offset-2 focus-visible:prose-a:outline-tertiary-500 prose-li:mb-4 prose-li:leading-7"
 	>
 		<h1
 			class="post-title text-4xl capitalize leading-[1.2] sm:text-6xl sm:leading-[1.1]"
