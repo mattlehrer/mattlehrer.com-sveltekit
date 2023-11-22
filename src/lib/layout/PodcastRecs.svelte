@@ -7,7 +7,7 @@
 	export let recommendations: EpisodeRecommendation[];
 </script>
 
-<section class="wrapper pb-8 sm:pb-16" aria-labelledby="podcast-recs-heading">
+<section class="wrapper isolate pb-8 sm:pb-16" aria-labelledby="podcast-recs-heading">
 	<div class="full-bleed relative py-8 sm:py-16">
 		<DividerBehindHeading />
 		<h2 id="podcast-recs-heading" class="relative flex justify-center">

@@ -7,7 +7,10 @@
 	export let ratings: BookRating[];
 </script>
 
-<section class="wrapper pb-8 @container sm:pb-16" aria-labelledby="book-ratings-heading">
+<section
+	class="wrapper relative z-10 pb-8 @container sm:pb-16"
+	aria-labelledby="book-ratings-heading"
+>
 	<div class="full-bleed relative py-8 sm:py-16">
 		<DividerBehindHeading />
 		<h2 id="book-ratings-heading" class="relative flex justify-center">

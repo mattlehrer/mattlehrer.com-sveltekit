@@ -1,5 +1,5 @@
 <section id="hero" class="wrapper" aria-labelledby="hero-heading">
-	<div class="relative isolate py-12">
+	<div class="relative py-12">
 		<div class=" max-w-3xl py-12 lg:py-32">
 			<div class="fancy-serif-regular">
 				<h1 id="hero-heading" class="text-4xl tracking-tight sm:text-6xl">
