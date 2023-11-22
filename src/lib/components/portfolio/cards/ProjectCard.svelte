@@ -9,14 +9,14 @@
 	export let href: string;
 </script>
 
-<article class="rounded bg-primary-200 hover:bg-primary-400">
+<article class="max-w-min rounded bg-primary-200 hover:bg-primary-400">
 	<a
 		href="/projects/#{id}"
 		class="block h-full rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 	>
 		<div
-			class="@4xl:w-72 @4xl:px-4 @4xl:py-4 @sm:w-96 flex w-full flex-col rounded
-	px-6 py-6 shadow-inner"
+			class="flex w-full flex-col rounded px-6 py-6 shadow-inner @sm:w-96
+	@4xl:w-72 @4xl:px-4 @4xl:py-4"
 		>
 			<div class="mb-2 flex items-center justify-between">
 				<div class=" flex items-center gap-3">
