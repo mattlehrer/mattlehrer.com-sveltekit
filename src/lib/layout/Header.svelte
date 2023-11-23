@@ -18,7 +18,7 @@
 					id="menu-toggle"
 					aria-label={isChecked ? 'Close menu' : 'Open menu'}
 					title={isChecked ? 'Close menu' : 'Open menu'}
-					class="absolute cursor-pointer opacity-0"
+					class="absolute cursor-pointer opacity-0 lg:hidden"
 					type="checkbox"
 					bind:checked={isChecked}
 				/>
@@ -60,7 +60,7 @@
 	}
 
 	li > a {
-		@apply px-2 text-lg hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 lg:text-base lg:text-lg;
+		@apply px-2 text-lg hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 lg:text-lg;
 	}
 
 	.menu-button,
