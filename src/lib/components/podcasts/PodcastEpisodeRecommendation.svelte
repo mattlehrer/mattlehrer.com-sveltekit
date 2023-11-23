@@ -39,7 +39,9 @@
 					href={episode.url}
 					class="-m-1 rounded-lg p-1 opacity-80 hover:scale-125 hover:bg-primary-800 hover:text-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 					target="_blank"
-					><ExternalLink class="h-5 w-5" />
+				>
+					<span class="sr-only">episode's page on the publisher's site</span>
+					<ExternalLink class="h-5 w-5" />
 				</a>
 			</div>
 

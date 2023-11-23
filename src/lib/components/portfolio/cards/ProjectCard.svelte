@@ -30,6 +30,7 @@
 					{href}
 					class="rounded p-1 hover:bg-primary-800 hover:text-primary-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 				>
+					<span class="sr-only">{title}</span>
 					<ExternalLink class="inline-block h-5 w-5 opacity-60" />
 				</a>
 			</div>
