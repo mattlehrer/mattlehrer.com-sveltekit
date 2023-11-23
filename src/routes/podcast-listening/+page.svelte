@@ -38,11 +38,13 @@
 				<PodcastEpisodeRecommendation {episode} />
 			{/each}
 		</div>
-		<p class="mt-4">
-			<a class="text-lg sm:text-xl" href="/podcast-listening/episodes"
-				>See all episode recommendations <ArrowRight class="inline-block text-inherit" /></a
+		<div>
+			<a
+				href="/podcast-listening/episodes"
+				class="tag-colors mt-4 flex max-w-max items-center rounded px-4 py-2 text-lg font-light hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+				>See all episode recommendations <ArrowRight class="ml-2 inline-block" /></a
 			>
-		</p>
+		</div>
 	</section>
 
 	<section>
@@ -52,11 +54,13 @@
 				<PodcastSubscription {podcast} />
 			{/each}
 		</div>
-		<p class="mt-4">
-			<a class="text-lg sm:text-xl" href="/podcast-listening/subscriptions"
-				>See all subscriptions <ArrowRight class="inline-block text-inherit" /></a
+		<div>
+			<a
+				href="/podcast-listening/subscriptions"
+				class="tag-colors mt-4 flex max-w-max items-center rounded px-4 py-2 text-lg font-light hover:scale-110 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+				>See all subscriptions <ArrowRight class="ml-2 inline-block" /></a
 			>
-		</p>
+		</div>
 	</section>
 </article>
 
