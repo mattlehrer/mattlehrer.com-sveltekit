@@ -34,14 +34,14 @@
 	];
 </script>
 
-<section class="wrapper @container pb-8 sm:pb-16" aria-labelledby="projects-heading">
+<section class="wrapper pb-8 sm:pb-16" aria-labelledby="projects-heading">
 	<div class="full-bleed relative py-8 sm:py-16">
 		<DividerBehindHeading />
 		<h2 id="projects-heading" class="relative flex justify-center">
 			<span>Projects</span>
 		</h2>
 	</div>
-	<div class="@5xl:flex-row @5xl:flex-wrap @container mt-8 flex flex-col gap-4">
+	<div class=" mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
 		{#each projectBriefs as projectBrief}
 			<ProjectCard
 				id={projectBrief.id}
