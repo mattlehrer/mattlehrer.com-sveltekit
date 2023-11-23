@@ -6,7 +6,7 @@
 </script>
 
 <a
-	class="group rounded-sm bg-primary-200 p-4 shadow-inner hover:bg-primary-400"
+	class="group rounded-sm bg-primary-200 p-4 shadow-inner hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
 	target="_blank"
 	href={podcast.htmlUrl}
 >
