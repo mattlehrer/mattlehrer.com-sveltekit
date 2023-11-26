@@ -48,12 +48,18 @@
 	class="flex w-full flex-col justify-between gap-2 rounded-sm bg-primary-200 p-4 shadow-inner sm:max-w-[40ch] sm:p-6"
 >
 	<div class="flex gap-4 sm:gap-6">
-		<img
-			src="https://public.overcast-cdn.com/art/{episode.overcastFeedId}?v1"
-			alt={`Cover art for ${episode.feedTitle}`}
-			loading="lazy"
-			class="h-20 w-20 sm:h-28 sm:w-28"
-		/>
+		<picture>
+			<source
+				srcset={`/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=webp&we`}
+				type="image/webp"
+			/>
+			<img
+				src={`/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=jpg&we`}
+				alt={`Cover art for ${episode.feedTitle}`}
+				loading="lazy"
+				class="h-20 w-20 max-w-none sm:h-28 sm:w-28"
+			/>
+		</picture>
 		<div class="flex w-full flex-col">
 			<div class="flex items-start justify-between">
 				<h3 class="text-lg font-bold leading-[1.33em]">{decodeHtml(episode.title)}</h3>
@@ -89,7 +95,7 @@
 		on:ended={handlePause}
 		class="mt-2 w-full"
 	>
-		<source src={episode.enclosureUrl} type="audio/mpeg" />
+		<source src={episode.enclosureUrl.replace('http://', 'https://')} type="audio/mpeg" />
 	</audio>
 </article>
 
