@@ -17,7 +17,7 @@ export type BookRating = {
 	rating: number;
 	title: string;
 	subtitle: string;
-	description: string;
+	description?: string;
 	authors: string[];
 	reviewTitle?: string;
 	reviewContent?: string;

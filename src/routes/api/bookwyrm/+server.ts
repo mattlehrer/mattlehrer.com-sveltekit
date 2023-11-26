@@ -25,6 +25,10 @@ export const GET = (async ({ fetch }) => {
 
 	let ratings: BookRating[] = [];
 	for await (const items of getBookRatings(fetch)) {
+		// Remove description to save bandwidth
+		for (const item of items) {
+			delete item.description;
+		}
 		ratings = ratings.concat(items);
 		if (dev && ratings.length) break;
 	}
