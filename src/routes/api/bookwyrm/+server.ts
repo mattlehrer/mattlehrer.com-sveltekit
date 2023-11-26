@@ -3,6 +3,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import type { BookRating, BookwyrmAuthor, BookwyrmBook, BookwyrmOutbox } from '$lib/types';
 import { dev } from '$app/environment';
+import { dev_mode_ratings } from '$lib/devdata/bookwyrm';
 
 type Fetch = typeof fetch;
 
@@ -18,6 +19,10 @@ const fetchOptions = {
 };
 
 export const GET = (async ({ fetch }) => {
+	if (dev && dev_mode_ratings?.length) {
+		return json({ ratings: dev_mode_ratings });
+	}
+
 	let ratings: BookRating[] = [];
 	for await (const items of getBookRatings(fetch)) {
 		ratings = ratings.concat(items);
