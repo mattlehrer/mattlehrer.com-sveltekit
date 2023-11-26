@@ -9,6 +9,7 @@
 
 	$: if ($audioPlaying) {
 		isPaused = $audioPlaying !== episode.enclosureUrl;
+		if (!isPaused) loadMediaSession(episode);
 	}
 
 	function handlePlay() {
@@ -19,6 +20,27 @@
 	function handlePause() {
 		$audioPlaying = null;
 		isPaused = true;
+	}
+
+	function loadMediaSession(episode: EpisodeRecommendation) {
+		if (!('mediaSession' in navigator)) return;
+
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: episode.title,
+			artist: episode.feedTitle,
+			artwork: [
+				{
+					src: `/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=png&we`,
+					sizes: '128x128',
+					type: 'image/png',
+				},
+				{
+					src: `/images/?oc=1&img=${episode.overcastFeedId}&w=512&output=png&we`,
+					sizes: '512x512',
+					type: 'image/png',
+				},
+			],
+		});
 	}
 </script>
 
