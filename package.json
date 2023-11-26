@@ -15,13 +15,13 @@
 		"pages:dev": "wrangler pages dev --compatibility-flags=\"nodejs_compat\" --compatibility-date=2023-10-25 --proxy 5173 -- npm run dev"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20231025.0",
+		"@cloudflare/workers-types": "^4.20231121.0",
 		"@playwright/test": "^1.40.0",
 		"@svelte-put/clickoutside": "^3.0.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"@sveltejs/kit": "^1.27.6",
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.9.3",
+		"@types/node": "^20.10.0",
 		"@typescript-eslint/eslint-plugin": "^6.12.0",
 		"@typescript-eslint/parser": "^6.12.0",
 		"@zerodevx/svelte-img": "^2.1.0",
@@ -32,15 +32,15 @@
 		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.31",
 		"prettier": "^3.1.0",
-		"prettier-plugin-svelte": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.5.7",
 		"svelte": "^4.2.7",
-		"svelte-check": "^3.6.0",
+		"svelte-check": "^3.6.2",
 		"tailwindcss": "^3.3.5",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.2",
 		"vite": "^4.5.0",
-		"wrangler": "^3.16.0"
+		"wrangler": "^3.17.1"
 	},
 	"dependencies": {
 		"@fontsource-variable/plus-jakarta-sans": "^5.0.18",
@@ -49,7 +49,7 @@
 		"colorjs.io": "^0.4.5",
 		"fast-xml-parser": "^4.3.2",
 		"just-clone": "^6.2.0",
-		"lucide-svelte": "^0.292.0",
+		"lucide-svelte": "^0.293.0",
 		"rehype-slug": "^6.0.0",
 		"remark-unwrap-images": "^4.0.0",
 		"shiki": "^0.14.5",
