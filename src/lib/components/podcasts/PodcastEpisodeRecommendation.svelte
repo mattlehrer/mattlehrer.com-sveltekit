@@ -3,13 +3,33 @@
 	import type { EpisodeRecommendation } from '$lib/types';
 	import { decodeHtml } from '$lib/utils';
 	import { ExternalLink } from 'lucide-svelte';
+	import { onMount } from 'svelte';
 
 	export let episode: EpisodeRecommendation;
 	export let isPaused = true;
 
+	let errorMsg: undefined | string = undefined;
+	let readyState = 0;
+	// @ts-expect-error - getting node types but this is only in the browser and window.setTimeout is not working as a type
+	let loadingMetadataTimer = undefined;
+
+	onMount(() => {
+		loadingMetadataTimer = setTimeout(() => {
+			if (readyState === 0) {
+				handleError();
+			}
+		}, 15000);
+	});
+
 	$: if ($audioPlaying) {
 		isPaused = $audioPlaying !== episode.enclosureUrl;
 		if (!isPaused) loadMediaSession(episode);
+	}
+
+	$: if (readyState >= 1) {
+		// @ts-expect-error - as above
+		clearTimeout(loadingMetadataTimer);
+		errorMsg = undefined;
 	}
 
 	function handlePlay() {
@@ -20,6 +40,14 @@
 	function handlePause() {
 		$audioPlaying = null;
 		isPaused = true;
+	}
+
+	function handleError() {
+		$audioPlaying = null;
+		isPaused = true;
+		errorMsg =
+			"There was a problem loading the audio file from the publisher. It's possible this episode has been removed or is now behind a paywall.";
+		console.log('Error loading audio file for episode', episode.title);
 	}
 
 	function loadMediaSession(episode: EpisodeRecommendation) {
@@ -86,17 +114,23 @@
 			</p>
 		</div>
 	</div>
-	<audio
-		controls
-		preload="metadata"
-		bind:paused={isPaused}
-		on:play={handlePlay}
-		on:pause={handlePause}
-		on:ended={handlePause}
-		class="mt-2 w-full"
-	>
-		<source src={episode.enclosureUrl.replace('http://', 'https://')} type="audio/mpeg" />
-	</audio>
+	{#if errorMsg}
+		<p class="mt-2 font-light text-red-600">{errorMsg}</p>
+	{:else}
+		<audio
+			controls
+			preload="metadata"
+			bind:paused={isPaused}
+			bind:readyState
+			on:play={handlePlay}
+			on:pause={handlePause}
+			on:ended={handlePause}
+			on:error={handleError}
+			class="mt-2 w-full"
+		>
+			<source src={episode.enclosureUrl.replace('http://', 'https://')} type="audio/mpeg" />
+		</audio>
+	{/if}
 </article>
 
 <style lang="postcss">
