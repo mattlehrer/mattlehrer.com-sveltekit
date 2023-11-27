@@ -35,13 +35,13 @@
 		<a href={rating.id} class="group focus-visible:outline-none">
 			<picture>
 				<source
-					srcset={`/images/?img=${rating.cover}&w=600&h=600&we&output=webp`}
+					srcset={`/images/?url=${rating.cover}&w=600&h=600&we&output=webp`}
 					type="image/webp"
 				/>
 				<img
 					loading="lazy"
 					class="mx-auto mb-6 h-40 shadow-xl transition-transform hover:-translate-y-8 hover:scale-125 group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-700 sm:h-60"
-					src={`/images/?img=${rating.cover}&w=600&h=600&we&output=jpg`}
+					src={`/images/?url=${rating.cover}&w=600&h=600&we&output=jpg`}
 					alt="{rating.title} cover"
 				/>
 			</picture>

@@ -30,12 +30,12 @@
 			artist: episode.feedTitle,
 			artwork: [
 				{
-					src: `/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=png&we`,
+					src: `/images/?url=public.overcast-cdn.com/art/${episode.overcastFeedId}&w=128&output=png&we`,
 					sizes: '128x128',
 					type: 'image/png',
 				},
 				{
-					src: `/images/?oc=1&img=${episode.overcastFeedId}&w=512&output=png&we`,
+					src: `/images/?url=public.overcast-cdn.com/art/${episode.overcastFeedId}&w=512&output=png&we`,
 					sizes: '512x512',
 					type: 'image/png',
 				},
@@ -50,11 +50,11 @@
 	<div class="flex gap-4 sm:gap-6">
 		<picture>
 			<source
-				srcset={`/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=webp&we`}
+				srcset={`/images/?url=public.overcast-cdn.com/art/${episode.overcastFeedId}&w=128&output=webp&we`}
 				type="image/webp"
 			/>
 			<img
-				src={`/images/?oc=1&img=${episode.overcastFeedId}&w=128&output=jpg&we`}
+				src={`/images/?url=public.overcast-cdn.com/art/${episode.overcastFeedId}&w=128&output=jpg&we`}
 				alt={`Cover art for ${episode.feedTitle}`}
 				loading="lazy"
 				class="h-20 w-20 max-w-none sm:h-28 sm:w-28"
