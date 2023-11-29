@@ -24,8 +24,8 @@ dependencies:
     specifier: ^6.2.0
     version: 6.2.0
   lucide-svelte:
-    specifier: ^0.293.0
-    version: 0.293.0(svelte@4.2.7)
+    specifier: ^0.294.0
+    version: 0.294.0(svelte@4.2.7)
   rehype-slug:
     specifier: ^6.0.0
     version: 6.0.0
@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^4.20231121.0
     version: 4.20231121.0
   '@playwright/test':
-    specifier: ^1.40.0
-    version: 1.40.0
+    specifier: ^1.40.1
+    version: 1.40.1
   '@svelte-put/clickoutside':
     specifier: ^3.0.1
     version: 3.0.1
@@ -748,20 +748,20 @@ packages:
     engines: {node: '>=8.0'}
     dev: false
 
-  /@playwright/test@1.40.0:
-    resolution: {integrity: sha512-PdW+kn4eV99iP5gxWNSDQCbhMaDVej+RXL5xr6t04nbKLCBwYtA046t7ofoczHOm8u6c+45hpDKQVZqtqwkeQg==}
+  /@playwright/test@1.40.1:
+    resolution: {integrity: sha512-EaaawMTOeEItCRvfmkI9v6rBkF1svM8wjl/YPRrg2N2Wmp+4qJYkWtJsbew1szfKKDm6fPLy4YAanBhIlf9dWw==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      playwright: 1.40.0
+      playwright: 1.40.1
     dev: true
 
   /@polka/url@1.0.0-next.23:
     resolution: {integrity: sha512-C16M+IYz0rgRhWZdCmK+h58JMv8vijAA61gmz2rspCSwKwzBebpdcsiUmwrtJRdphuY30i6BSLEOP8ppbNLyLg==}
     dev: true
 
-  /@rollup/pluginutils@5.0.5:
-    resolution: {integrity: sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==}
+  /@rollup/pluginutils@5.1.0:
+    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -1218,7 +1218,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001565
-      electron-to-chromium: 1.4.595
+      electron-to-chromium: 1.4.596
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: true
@@ -1433,8 +1433,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /electron-to-chromium@1.4.595:
-    resolution: {integrity: sha512-+ozvXuamBhDOKvMNUQvecxfbyICmIAwS4GpLmR0bsiSBlGnLaOcs2Cj7J8XSbW+YEaN3Xl3ffgpm+srTUWFwFQ==}
+  /electron-to-chromium@1.4.596:
+    resolution: {integrity: sha512-zW3zbZ40Icb2BCWjm47nxwcFGYlIgdXkAx85XDO7cyky9J4QQfq8t0W19/TLZqq3JPQXtlv8BPIGmfa9Jb4scg==}
     dev: true
 
   /end-of-stream@1.4.4:
@@ -2094,8 +2094,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte@0.293.0(svelte@4.2.7):
-    resolution: {integrity: sha512-nQ6QO6anjjiVoipw3dNptzI6NWuiArlhysVtRpoAWICSQVMR3ybwVf6piUUqbjGe+RfGufLzCl93C/yhsS+p4w==}
+  /lucide-svelte@0.294.0(svelte@4.2.7):
+    resolution: {integrity: sha512-jqQDL9bfZm3DzEhulRdPWWw88qQpS/w/fDAdgTsYXjij5I81HYFFxbDHpnSHes2oH9Eri5M3QQDgqV9xtqkyig==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
@@ -2368,18 +2368,18 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  /playwright-core@1.40.0:
-    resolution: {integrity: sha512-fvKewVJpGeca8t0ipM56jkVSU6Eo0RmFvQ/MaCQNDYm+sdvKkMBBWTE1FdeMqIdumRaXXjZChWHvIzCGM/tA/Q==}
+  /playwright-core@1.40.1:
+    resolution: {integrity: sha512-+hkOycxPiV534c4HhpfX6yrlawqVUzITRKwHAmYfmsVreltEl6fAZJ3DPfLMOODw0H3s1Itd6MDCWmP1fl/QvQ==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright@1.40.0:
-    resolution: {integrity: sha512-gyHAgQjiDf1m34Xpwzaqb76KgfzYrhK7iih+2IzcOCoZWr/8ZqmdBw+t0RU85ZmfJMgtgAiNtBQ/KS2325INXw==}
+  /playwright@1.40.1:
+    resolution: {integrity: sha512-2eHI7IioIpQ0bS1Ovg/HszsN/XKNwEG1kbzSDDmADpclKc7CyqkHw7Mg2JCz/bbCxg25QUPcjksoMW7JcIFQmw==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      playwright-core: 1.40.0
+      playwright-core: 1.40.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3295,7 +3295,7 @@ packages:
     resolution: {integrity: sha512-oFNfc58iLz1lHFsIKQy+wp0RNcZjiaDeHYTexYowpf4RYx9tZ97eWEcw8lQ1jDT8AnOso6XZi5iGjLNAeTR9Tw==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@rollup/pluginutils': 5.0.5
+      '@rollup/pluginutils': 5.1.0
       imagetools-core: 4.1.0
     transitivePeerDependencies:
       - rollup
