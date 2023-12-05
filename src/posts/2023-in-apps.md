@@ -18,7 +18,7 @@ I saw this on [Chris Coyier's blog](https://chriscoyier.net/2023/11/25/default-a
 
 📰 RSS service: None, but I'm ready
 
-⌨️ Launcher: [Raycast](raycast.com)
+⌨️ Launcher: [Raycast](https://raycast.com)
 
 ☁️ Cloud storage: Dropbox and iCloud
 
