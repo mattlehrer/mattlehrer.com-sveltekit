@@ -1,5 +1,5 @@
 ---
-title: "My default apps: 2023"
+title: 'My default apps: 2023'
 description: What's I'm using right now
 date: '2023-12-01'
 created: 2023-12-01
@@ -8,7 +8,6 @@ published: true
 ---
 
 I saw this on [Chris Coyier's blog](https://chriscoyier.net/2023/11/25/default-apps-2023/) and I'm doing it, too.
-
 
 📧 Mail service: [Fastmail](https://fastmail.com)
 
