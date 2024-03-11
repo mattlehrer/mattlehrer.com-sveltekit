@@ -1,8 +1,9 @@
-import { redirect } from '@sveltejs/kit';
+import { json, redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const prerender = 'auto';
 
 export const GET: RequestHandler = async () => {
-	throw redirect(301, '/podcast-listening');
+	redirect(301, '/podcast-listening');
+	return json({ message: 'Redirecting to /podcast-listening' });
 };

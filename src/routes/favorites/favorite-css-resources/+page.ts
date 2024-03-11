@@ -11,6 +11,6 @@ export async function load() {
 			meta: post.metadata,
 		};
 	} catch (e) {
-		throw error(404, `Could not find the post`);
+		error(404, `Could not find the post`);
 	}
 }
