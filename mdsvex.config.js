@@ -1,9 +1,7 @@
 import { escapeSvelte } from 'mdsvex';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import rehypeSlug from 'rehype-slug';
-import shiki from 'shiki';
-
-import t from './src/theme/night-owl.json' assert { type: 'json' };
+import { getHighlighter } from 'shiki';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 export const mdsvexOptions = {
@@ -16,10 +14,11 @@ export const mdsvexOptions = {
 	rehypePlugins: [rehypeSlug],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const highlighter = await shiki.getHighlighter({
-				theme: t,
+			const highlighter = await getHighlighter({
+				themes: ['night-owl'],
+				langs: ['javascript', 'svelte', 'typescript', 'html', 'css', 'json', 'markdown', 'zsh'],
 			});
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'night-owl' }));
 			return `{@html \`${html}\` }`;
 		},
 	},

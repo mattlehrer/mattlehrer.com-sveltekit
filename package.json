@@ -22,8 +22,8 @@
 		"@sveltejs/kit": "^1.30.4",
 		"@tailwindcss/typography": "^0.5.10",
 		"@types/node": "^20.11.25",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"@typescript-eslint/parser": "^6.21.0",
+		"@typescript-eslint/eslint-plugin": "^7.1.1",
+		"@typescript-eslint/parser": "^7.1.1",
 		"@zerodevx/svelte-img": "^2.1.0",
 		"autoprefixer": "^10.4.18",
 		"eslint": "^8.57.0",
@@ -46,13 +46,13 @@
 		"@fontsource-variable/plus-jakarta-sans": "^5.0.20",
 		"@fontsource-variable/source-code-pro": "^5.0.18",
 		"@tailwindcss/container-queries": "^0.1.1",
-		"colorjs.io": "^0.4.5",
+		"colorjs.io": "^0.5.0",
 		"fast-xml-parser": "^4.3.5",
 		"just-clone": "^6.2.0",
-		"lucide-svelte": "^0.294.0",
+		"lucide-svelte": "^0.354.0",
 		"rehype-slug": "^6.0.0",
 		"remark-unwrap-images": "^4.0.0",
-		"shiki": "^0.14.7",
+		"shiki": "^1.1.7",
 		"xmlbuilder2": "^3.1.1"
 	}
 }
