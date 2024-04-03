@@ -3,6 +3,7 @@
 	import StrangeAttractors from '$lib/components/portfolio/StrangeAttractors.svelte';
 	import WhomToFollow from '$lib/components/portfolio/WhomToFollow.svelte';
 	import SIWE_Chat from '$lib/components/portfolio/SIWE_Chat.svelte';
+	import ManicPixieDreamUrl from './ManicPixieDreamURL.svelte';
 </script>
 
 <section class="wrapper py-8 sm:py-16" aria-labelledby="projects">
@@ -12,8 +13,8 @@
 				<div class="project-column-spacing self-center">
 					<div class="lg:max-w-lg">
 						<div class="flex items-center gap-6">
-							<h1 id="projects" class="full-bleed mb-2 mt-8 w-full text-4xl sm:text-5xl">
-								Projects
+							<h1 id="projects" class="full-bleed mb-24 mt-8 w-full text-4xl sm:mb-40 sm:text-5xl">
+								Projects & Portfolio
 							</h1>
 						</div>
 					</div>
@@ -25,6 +26,10 @@
 	<div
 		class="projects full-bleed flex flex-col gap-px bg-gradient-to-r from-tertiary-700 via-tertiary-500 to-tertiary-700"
 	>
+		<div class="main-bg-color">
+			<ManicPixieDreamUrl />
+		</div>
+
 		<div class="main-bg-color">
 			<WhomToFollow />
 		</div>

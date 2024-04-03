@@ -3,10 +3,17 @@
 	import ProjectCard from '$lib/components/portfolio/cards/ProjectCard.svelte';
 	import { ArrowRight } from 'lucide-svelte';
 	import whomToFollow from '$lib/components/portfolio/cards/images/wtf.png?format=avif;webp;png&as=sm';
-	import strangeAttractors from '$lib/components/portfolio/cards/images/strange_attractors.png?format=avif;webp;png&as=sm';
+	import manicPixieDreamUrl from '$lib/components/portfolio/cards/images/manicpixiedreamurl.png?format=avif;webp;png&as=sm';
 	import quicksilvercre from '$lib/components/portfolio/cards/images/quicksilvercre.png?format=avif;webp;png&as=sm';
 
 	const projectBriefs = [
+		{
+			id: 'manicpixie',
+			title: 'Manic Pixie Dream URL',
+			description: `A social network for parked domains.`,
+			image: manicPixieDreamUrl,
+			href: 'https://manicpixiedreamurl.com',
+		},
 		{
 			id: 'whomtofollow',
 			title: 'Whom To Follow',
@@ -22,14 +29,6 @@
 				'A commercial real estate investment analysis tool, starting with a multi-tenant industrial buildings.',
 			image: quicksilvercre,
 			href: 'https://app.quicksilvercre.com',
-		},
-		{
-			id: 'strangeattractors',
-			title: 'Strange Attractors',
-			description: `Interactive 3D visualizations of strange attractors inspired by James Gleick's <i>
-			Chaos</i>.`,
-			image: strangeAttractors,
-			href: 'https://chaos.mattlehrer.com',
 		},
 	];
 </script>
