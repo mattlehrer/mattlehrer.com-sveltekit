@@ -1,6 +1,6 @@
 ---
 title: 'My default apps: 2023'
-description: What's I'm using right now
+description: What I'm using right now
 date: '2023-12-01'
 created: 2023-12-01
 categories: [apps]
