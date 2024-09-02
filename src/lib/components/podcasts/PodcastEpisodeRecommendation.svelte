@@ -10,15 +10,14 @@
 
 	let errorMsg: undefined | string = undefined;
 	let readyState = 0;
-	// @ts-expect-error - getting node types but this is only in the browser and window.setTimeout is not working as a type
-	let loadingMetadataTimer = undefined;
+	let loadingMetadataTimer: ReturnType<typeof setTimeout> | undefined = undefined;
 
 	onMount(() => {
 		loadingMetadataTimer = setTimeout(() => {
 			if (readyState === 0) {
 				handleError();
 			}
-		}, 15000);
+		}, 60_000);
 	});
 
 	$: if ($audioPlaying) {
@@ -27,8 +26,7 @@
 	}
 
 	$: if (readyState >= 1) {
-		// @ts-expect-error - as above
-		clearTimeout(loadingMetadataTimer);
+		if (loadingMetadataTimer) clearTimeout(loadingMetadataTimer);
 		errorMsg = undefined;
 	}
 
